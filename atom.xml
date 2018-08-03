@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rdf0rest.github.io/"/>
-  <updated>2018-08-02T05:02:20.999Z</updated>
+  <updated>2018-08-03T15:30:41.447Z</updated>
   <id>https://rdf0rest.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Deep Learning Week 1|note</title>
+    <link href="https://rdf0rest.github.io/2018/08/02/learning/"/>
+    <id>https://rdf0rest.github.io/2018/08/02/learning/</id>
+    <published>2018-08-02T10:36:48.000Z</published>
+    <updated>2018-08-03T15:30:41.447Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="What-is-Neural-Network"><a href="#What-is-Neural-Network" class="headerlink" title="What is Neural Network?"></a>What is Neural Network?</h2><p>Here is a simple function:<br>$$<br>X \longrightarrow \bigcirc \longrightarrow Y<br>$$<br>while in this function, the circle $\bigcirc$ who connects $X$ and $Y$ called “a <strong>Neuron</strong>“.</p><p>And in many ways, a neuron takes max of zero and take off a straight line like:<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/A%20neuron.png?raw=true" alt=""><br>This kind of function often be called as “<strong>ReLU</strong>“ function.(<em>rectified linear units</em>). While in a neural networks, it usually consists of lots of single neuron:<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/networks.png?raw=true" alt=""></p><p>Due to that each unit of hidden layer connects all input features, so the hidden layer and input layer are <strong>density connected</strong> :</p><ul><li>For each neuron, it accpts all features so that it will decide how many feature are going to use and how to fit the function by itself, so it is density connect.</li></ul><h2 id="Supervised-Learning-with-Neural-Networls"><a href="#Supervised-Learning-with-Neural-Networls" class="headerlink" title="Supervised Learning with Neural Networls"></a>Supervised Learning with Neural Networls</h2><p>Different applications need different kinds of Neural networks.</p><ul><li>Normal Regression: Standard Neural Networks(<strong>SNN</strong>)</li><li>Image recognizing: Convolutional Neural Network(<strong>CNN</strong>)</li><li>Sequence data: Recurrnt Neural Networks(<strong>RNN</strong>)<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/kindsofnetworks.png?raw=true" alt=""><br>####Type of data</li><li><p>Structured Data: Basically database of data. Each of the features has a very well defined meaning.</p></li><li><p>Unstructured Data: Refers to things like audio, raw audio, images or text.</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;What-is-Neural-Network&quot;&gt;&lt;a href=&quot;#What-is-Neural-Network&quot; class=&quot;headerlink&quot; title=&quot;What is Neural Network?&quot;&gt;&lt;/a&gt;What is Neural Netw
+      
+    
+    </summary>
+    
+      <category term="deeplearning" scheme="https://rdf0rest.github.io/categories/deeplearning/"/>
+    
+    
+      <category term="算法" scheme="https://rdf0rest.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>hello,2018</title>
