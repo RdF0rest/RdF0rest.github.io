@@ -102,21 +102,21 @@
 
 
 
-  <meta name="description" content="What is Neural Network?Here is a simple function:$$X \longrightarrow \bigcirc \longrightarrow Y$$while in this function, the circle $\bigcirc$ who connects $X$ and $Y$ called “a Neuron“. And in many w">
+  <meta name="description" content="What is Neural Network?Here is a simple function:  X \longrightarrow \bigcirc \longrightarrow Ywhile in this function, the circle $\bigcirc$ who connects $X$ and $Y$ called “a Neuron“. And in many way">
 <meta name="keywords" content="算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Deep Learning Week 1|note">
 <meta property="og:url" content="https://rdf0rest.github.io/2018/08/02/learning/index.html">
 <meta property="og:site_name" content="Rd&#39;s F0rest">
-<meta property="og:description" content="What is Neural Network?Here is a simple function:$$X \longrightarrow \bigcirc \longrightarrow Y$$while in this function, the circle $\bigcirc$ who connects $X$ and $Y$ called “a Neuron“. And in many w">
+<meta property="og:description" content="What is Neural Network?Here is a simple function:  X \longrightarrow \bigcirc \longrightarrow Ywhile in this function, the circle $\bigcirc$ who connects $X$ and $Y$ called “a Neuron“. And in many way">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://github.com/RdF0rest/images/blob/master/DeepLearning/A%20neuron.png?raw=true">
 <meta property="og:image" content="https://github.com/RdF0rest/images/blob/master/DeepLearning/networks.png?raw=true">
 <meta property="og:image" content="https://github.com/RdF0rest/images/blob/master/DeepLearning/kindsofnetworks.png?raw=true">
-<meta property="og:updated_time" content="2018-08-03T15:30:41.447Z">
+<meta property="og:updated_time" content="2018-08-04T07:37:55.084Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Deep Learning Week 1|note">
-<meta name="twitter:description" content="What is Neural Network?Here is a simple function:$$X \longrightarrow \bigcirc \longrightarrow Y$$while in this function, the circle $\bigcirc$ who connects $X$ and $Y$ called “a Neuron“. And in many w">
+<meta name="twitter:description" content="What is Neural Network?Here is a simple function:  X \longrightarrow \bigcirc \longrightarrow Ywhile in this function, the circle $\bigcirc$ who connects $X$ and $Y$ called “a Neuron“. And in many way">
 <meta name="twitter:image" content="https://github.com/RdF0rest/images/blob/master/DeepLearning/A%20neuron.png?raw=true">
 
 
@@ -274,9 +274,9 @@
         
         
           
-          <li class="menu-item menu-item-university">
-    <a href="/categories/University" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-university"></i> <br />University</a>
+          <li class="menu-item menu-item-math">
+    <a href="/categories/Math" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-university"></i> <br />Math</a>
   </li>
 
       
@@ -386,7 +386,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-03 23:30:41" itemprop="dateModified" datetime="2018-08-03T23:30:41+08:00">2018-08-03</time>
+                <time title="Modified: 2018-08-04 15:37:55" itemprop="dateModified" datetime="2018-08-04T15:37:55+08:00">2018-08-04</time>
               
             
           </span>
@@ -447,17 +447,19 @@
       
 
       
-        <h2 id="What-is-Neural-Network"><a href="#What-is-Neural-Network" class="headerlink" title="What is Neural Network?"></a>What is Neural Network?</h2><p>Here is a simple function:<br>$$<br>X \longrightarrow \bigcirc \longrightarrow Y<br>$$<br>while in this function, the circle $\bigcirc$ who connects $X$ and $Y$ called “a <strong>Neuron</strong>“.</p>
+        <h2 id="What-is-Neural-Network"><a href="#What-is-Neural-Network" class="headerlink" title="What is Neural Network?"></a>What is Neural Network?</h2><p>Here is a simple function:</p>
+<script type="math/tex; mode=display">
+X \longrightarrow \bigcirc \longrightarrow Y</script><p>while in this function, the circle $\bigcirc$ who connects $X$ and $Y$ called “a <strong>Neuron</strong>“.</p>
 <p>And in many ways, a neuron takes max of zero and take off a straight line like:<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/A%20neuron.png?raw=true" alt=""><br>This kind of function often be called as “<strong>ReLU</strong>“ function.(<em>rectified linear units</em>). While in a neural networks, it usually consists of lots of single neuron:<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/networks.png?raw=true" alt=""></p>
 <p>Due to that each unit of hidden layer connects all input features, so the hidden layer and input layer are <strong>density connected</strong> :</p>
 <ul>
 <li>For each neuron, it accpts all features so that it will decide how many feature are going to use and how to fit the function by itself, so it is density connect.</li>
 </ul>
-<h2 id="Supervised-Learning-with-Neural-Networls"><a href="#Supervised-Learning-with-Neural-Networls" class="headerlink" title="Supervised Learning with Neural Networls"></a>Supervised Learning with Neural Networls</h2><p>Different applications need different kinds of Neural networks.</p>
+<h2 id="Supervised-Learning-with-Neural-Networks"><a href="#Supervised-Learning-with-Neural-Networks" class="headerlink" title="Supervised Learning with Neural Networks"></a>Supervised Learning with Neural Networks</h2><p>Different applications need different kinds of Neural networks.</p>
 <ul>
 <li>Normal Regression: Standard Neural Networks(<strong>SNN</strong>)</li>
 <li>Image recognizing: Convolutional Neural Network(<strong>CNN</strong>)</li>
-<li>Sequence data: Recurrnt Neural Networks(<strong>RNN</strong>)<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/kindsofnetworks.png?raw=true" alt=""><br>####Type of data</li>
+<li>Sequence data: Recurrnt Neural Networks(<strong>RNN</strong>)<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/kindsofnetworks.png?raw=true" alt=""><h4 id="Type-of-data"><a href="#Type-of-data" class="headerlink" title="Type of data"></a>Type of data</h4></li>
 <li><p>Structured Data: Basically database of data. Each of the features has a very well defined meaning.</p>
 </li>
 <li><p>Unstructured Data: Refers to things like audio, raw audio, images or text.</p>
@@ -505,6 +507,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/09/QAGH_Inequality/" rel="prev" title="QAGH Inequality">
+                QAGH Inequality <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -581,7 +587,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -617,7 +623,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -660,7 +668,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-Neural-Network"><span class="nav-number">1.</span> <span class="nav-text">What is Neural Network?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Supervised-Learning-with-Neural-Networls"><span class="nav-number">2.</span> <span class="nav-text">Supervised Learning with Neural Networls</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-Neural-Network"><span class="nav-number">1.</span> <span class="nav-text">What is Neural Network?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Supervised-Learning-with-Neural-Networks"><span class="nav-number">2.</span> <span class="nav-text">Supervised Learning with Neural Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Type-of-data"><span class="nav-number">2.0.1.</span> <span class="nav-text">Type of data</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
