@@ -110,7 +110,7 @@
 <meta property="og:site_name" content="Rd&#39;s F0rest">
 <meta property="og:description" content="Proof of QAGH Inequality The QM-AM-GM-HM or QAGH inequality generalizes the basic result of the arithmetic mean-geometric mean (AM-GM) inequality, which compares the arithmetic mean (AM) and geometric">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-09T08:14:23.728Z">
+<meta property="og:updated_time" content="2018-08-09T16:54:13.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QAGH Inequality">
 <meta name="twitter:description" content="Proof of QAGH Inequality The QM-AM-GM-HM or QAGH inequality generalizes the basic result of the arithmetic mean-geometric mean (AM-GM) inequality, which compares the arithmetic mean (AM) and geometric">
@@ -365,12 +365,24 @@
                 
               
 
-              <time title="Created: 2018-08-09 15:29:53 / Modified: 16:14:23" itemprop="dateCreated datePublished" datetime="2018-08-09T15:29:53+08:00">2018-08-09</time>
+              <time title="Created: 2018-08-09 15:29:53" itemprop="dateCreated datePublished" datetime="2018-08-09T15:29:53+08:00">2018-08-09</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2018-08-10 00:54:13" itemprop="dateModified" datetime="2018-08-10T00:54:13+08:00">2018-08-10</time>
               
             
           </span>
@@ -436,25 +448,47 @@
 </blockquote>
 <ul>
 <li>QM(<strong>Quadratic Mean</strong>):
-$$Q_m = \sqrt{\frac{\sum_{i=1}^n{{x_i}^2}}{n}} = \sqrt{\frac{x_1^2+x_2^2+\cdots+x_n^2}{n}}$$
+$$Q_n = \sqrt{\frac{\sum_{i=1}^n{{x_i}^2}}{n}} = \sqrt{\frac{x_1^2+x_2^2+\cdots+x_n^2}{n}}$$
 </li>
 <li>AM(<strong>Arithmetic Mean</strong>):
 $$
-A_m = \frac{\sum_{i=1}^n{x_i}}{n}= \frac{x_1+x_2+\cdots+x_n}{n}
+A_n = \frac{\sum_{i=1}^n{x_i}}{n}= \frac{x_1+x_2+\cdots+x_n}{n}
 $$
 </li>
 <li>GM(<strong>Geometric Mean</strong>):
 $$
-G_m = \sqrt[n]{\prod_{i=1}^n{x_i}}=\sqrt[n]{x_1x_2\cdots x_n}
+G_n = \sqrt[n]{\prod_{i=1}^n{x_i}}=\sqrt[n]{x_1x_2\cdots x_n}
 $$
 </li>
 <li>HM(<strong>Harmonic Mean</strong>):
 $$
-H_m = \frac{n}{\sum_{i=1}^n{\frac{1}{x_i}}}=\frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\cdots+\frac{1}{x_n}}
+H_n = \frac{n}{\sum_{i=1}^n{\frac{1}{x_i}}}=\frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\cdots+\frac{1}{x_n}}
 $$
 
 </li>
 </ul>
+<p>For any list of $n$ nonnegtive real numbers $x_1,x_2,\cdots,x_n$,</p>
+<script type="math/tex; mode=display">
+H_n \le G_n \le A_n \le Q_n</script><p>and those equalities hold if $x_1 = x_2 = \cdots = x_n$.</p>
+<h2 id="Proofs"><a href="#Proofs" class="headerlink" title="Proofs"></a>Proofs</h2><h3 id="Proofs-of-the-AM–GM-inequality"><a href="#Proofs-of-the-AM–GM-inequality" class="headerlink" title="Proofs of the AM–GM inequality"></a>Proofs of the AM–GM inequality</h3><h4 id="Proofs-by-math-induction"><a href="#Proofs-by-math-induction" class="headerlink" title="Proofs by math induction"></a>Proofs by math induction</h4><p> For $n = 1$, the statement is true with equality.<br> For $n = 2$, there has:</p>
+<script type="math/tex; mode=display">
+ (x_1-x_2)^2 \ge 0\\
+ x_1^2 + x_2^2 + 2x_1x_2 - 4x_1x_2 \ge 0\\
+ (x_1+x_2)^2 \ge 4x_1x_2\\
+ \frac{x_1+x_2}{2} \ge \sqrt{x_1x_2}</script><p> Suppose that $G_n \le A_n$, there also has $x_{n+1}+(n-1)G_{n+1} \ge n\sqrt[n]{x_{n+1}G_{n+1}^{n-1}}$,<br> Thus:</p>
+<script type="math/tex; mode=display">
+ \frac{x_1+x_2+\cdots+x_n+x_{n+1}+(n-1)G_{n+1}}{n} \ge G_n+\sqrt[n]{x_{n+1}G_{n+1}^{n-1}}
+ \ge 2\sqrt[2n]{G^n_nx_{n+1}G_{n+1}^{n-1}} = 2G_{n+1}</script><p> Hence</p>
+<script type="math/tex; mode=display">
+(n+1)A_{n+1} = x_1+x_2+\cdots+x_n+x_{n+1} \ge 2nG_{n+1}-(n-1)G_{n+1} = (n+1)G_{n+1}</script><p> which can obtain</p>
+<script type="math/tex; mode=display">
+A_{n+1} \ge G_{n+1}</script><p> So the proof has been completed.　　　　　　　　　　　　　　　　　　　　　　　　　$\square$<br> <br><br><br><br></p>
+<h3 id="Proofs-of-the-GM–HM-inequality"><a href="#Proofs-of-the-GM–HM-inequality" class="headerlink" title="Proofs of the GM–HM inequality"></a>Proofs of the GM–HM inequality</h3><p> For any list of $n$ nonnegtive real numbers $\frac{1}{a_1},\frac{1}{a_2},\cdots,\frac{1}{a_n}$, with $A_{n+1} \ge G_{n+1}$, we have</p>
+<script type="math/tex; mode=display">
+ \frac{\frac{1}{a_1}+\frac{1}{a_2}+\cdots+\frac{1}{a_n}}{n} \ge \sqrt[n]{\frac{1}{a_1}\cdot \frac{1}{a_2}\cdot \cdots \cdot \frac{1}{a_n}} = \frac{1}{\sqrt[n]{a_1a_2\cdots a_n}}</script><p>Taking reciprocal of both sides of the equation, we have</p>
+<script type="math/tex; mode=display">
+\frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+\cdots+\frac{1}{a_n}} \le \sqrt[n]{a_1a_2\cdots a_n}</script><p>which completes the proof.　　　　　　　　　　　　　　　　　　　　　　　　　　　　$\square$<br><br><br><br><br></p>
+<h3 id="Proofs-of-the-QM–AM-inequality"><a href="#Proofs-of-the-QM–AM-inequality" class="headerlink" title="Proofs of the QM–AM inequality"></a>Proofs of the QM–AM inequality</h3><p>Consider that $A_n \le Q_n$ equals $Q_n^2-A_n^2 &gt;0$,<br>so there has<br>\begin{aligned}<br> Q_n^2-A_n^2 = Q_n^2-2A_n^2 + A_n^2 &amp; = \frac{a_1^2+a_2^2+\cdots+a_n^2}{n}-\frac{2a_1A_n+2a_2A_n+\cdots+2a_nA_n}{n} + \frac{nA_n^2}{n}\\<br>&amp; =\frac{(a_1^2-2a_1A_n+A_n^2)+(a_2^2-2a_2A_n+A_n^2)+\cdots+(a_n^2-2a_nA_n+A_n^2)}{n}\\<br>&amp; =\frac{(a_1-A_n)^2+(a_2-A_n)^2+\cdots+(a_n-A_n)^2}{n}\\<br>&amp; \ge 0<br>\end{aligned}<br>This completes the proof.　　　　　　　　　　　　　　　　　　　　　　　　　　　　$\square$</p>
 
       
     </div>
@@ -654,7 +688,7 @@ $$
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Proof-of-QAGH-Inequality"><span class="nav-number">1.</span> <span class="nav-text">Proof of QAGH Inequality</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Proof-of-QAGH-Inequality"><span class="nav-number">1.</span> <span class="nav-text">Proof of QAGH Inequality</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Proofs"><span class="nav-number">1.1.</span> <span class="nav-text">Proofs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Proofs-of-the-AM–GM-inequality"><span class="nav-number">1.1.1.</span> <span class="nav-text">Proofs of the AM–GM inequality</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Proofs-by-math-induction"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Proofs by math induction</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Proofs-of-the-GM–HM-inequality"><span class="nav-number">1.1.2.</span> <span class="nav-text">Proofs of the GM–HM inequality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Proofs-of-the-QM–AM-inequality"><span class="nav-number">1.1.3.</span> <span class="nav-text">Proofs of the QM–AM inequality</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
