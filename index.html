@@ -382,7 +382,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-19 00:02:36" itemprop="dateModified" datetime="2018-08-19T00:02:36+08:00">2018-08-19</time>
+                <time title="Modified: 2018-08-20 10:25:06" itemprop="dateModified" datetime="2018-08-20T10:25:06+08:00">2018-08-20</time>
               
             
           </span>
@@ -462,24 +462,55 @@ X(feature \quad vector) \longrightarrow MODEL \longrightarrow Y(label,\quad 0\qu
 </ul>
 <h2 id="Logistic-Regression"><a href="#Logistic-Regression" class="headerlink" title="Logistic Regression"></a>Logistic Regression</h2><p>Supervised Learning, Binary output.</p>
 <script type="math/tex; mode=display">
-X \longrightarrow Model \longrightarrow \hat{Y} = P(Y=1|X)</script><p>Parameters:</p>
+X \longrightarrow Model \longrightarrow \widehat Y = P(Y=1|X)</script><p>Parameters:</p>
 <ul>
 <li>$w\in \mathbb{R}^{n_x}$</li>
 <li>$ b \in \mathbb{R}$: inter-spectrum</li>
 <li>Usually keep $w$ and $b$ separete.</li>
 <li>otherwise, if there is no $b$, like:<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/withoutB.png?raw=true" alt=""><br><br><br>For linear Regression:<script type="math/tex; mode=display">
-\hat{y} = w^Tx+b \\ 0 \le \hat{y} \le 1</script><br><br>For Logistic Regression:<script type="math/tex; mode=display">
-\hat{y} = \sigma(w^Tx+b)\\
+\widehat{y} = w^Tx+b \\ 0 \le \widehat{y} \le 1</script><br><br>For Logistic Regression:<script type="math/tex; mode=display">
+\widehat{y} = \sigma(w^Tx+b)\\
 \sigma(x) = \frac{1}{1+e^{-x}}</script>where $\sigma(x)$ called <strong>sigmoid function</strong>.<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/sigmoidFunction.png?raw=true" alt=""></li>
 </ul>
 <h3 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h3><p>The Logistic Regression Model is persuing to find an efficient relationship between X and Y so we want:</p>
 <script type="math/tex; mode=display">
-\hat{Y} = \sigma(w^TX+b) \approx Y</script><h5 id="Loss-error-function"><a href="#Loss-error-function" class="headerlink" title="Loss (error) function:"></a>Loss (error) function:</h5><p>Try to measure how good output $\hat{y}$ is when the true label is $y$</p>
+\widehat{Y} = \sigma(w^TX+b) \approx Y</script><h5 id="Loss-error-function"><a href="#Loss-error-function" class="headerlink" title="Loss (error) function:"></a>Loss (error) function:</h5><p>Try to measure how good output $\widehat{y}$ is when the true label is $y$</p>
 <script type="math/tex; mode=display">
-L(\hat{y},y) = -(y\log{\hat{y}}+(1-y)\log{(1-\hat{y})})</script><p>To demostate that it is getting better when Loss function is getting small, we have:</p>
-<p>\begin{aligned}<br>If y=1: &amp; \quad L(\hat{y},y)=-\log{\hat{y}} &amp;\longrightarrow L(\hat{y},y) smaller, \hat{y}  larger.\\<br>If y=0: &amp; \quad L(\hat{y},y)=-\log{(1-\hat{y})} &amp;\longrightarrow L(\hat{y},y) larger, \hat{y}  smaller.\\<br>\end{aligned}</p>
-<p>Notice that the loss function measures what we are doing on <strong>a single example</strong>, While Cost function measure the whole examples:<br>\begin{aligned}<br>J(w,b) =&amp; \frac{1}{m}\sum_{i=1}^m{L(\hat{y}^{(i)},y^{(i)})}\\<br>=&amp; -\frac{1}{m}\sum_{i=1}^m[y^{(i)}\log{\hat{y}^{(i)}}+(1-y^{(i)})\log{(1-\hat{y}^{(i)})}]<br>\end{aligned}<br>Fitting model is the way to find parameters whose lead to the minimum cost function.</p>
-
+L(\widehat{y},y) = -(y\log{\widehat{y}}+(1-y)\log{(1-\widehat{y})})</script><p>To demostate that it is getting better when Loss function is getting small, we have:</p>
+<p>\begin{aligned}<br>If y=1: &amp; \quad L(\widehat{y},y)=-\log{\widehat{y}} &amp;\longrightarrow L(\widehat{y},y) smaller, \widehat{y}  larger.\\<br>If y=0: &amp; \quad L(\widehat{y},y)=-\log{(1-\widehat{y})} &amp;\longrightarrow L(\widehat{y},y) larger, \widehat{y}  smaller.\\<br>\end{aligned}</p>
+<p>Notice that the loss function measures what we are doing on <strong>a single example</strong>, While Cost function measure the whole examples:<br>\begin{aligned}<br>J(w,b) =&amp; \frac{1}{m}\sum_{i=1}^m{L(\widehat{y}^{(i)},y^{(i)})}\\<br>=&amp; -\frac{1}{m}\sum_{i=1}^m[y^{(i)}\log{\widehat{y}^{(i)}}+(1-y^{(i)})\log{(1-\widehat{y}^{(i)})}]<br>\end{aligned}<br>Fitting model is the way to find parameters whose minimize cost function.</p>
+<h2 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h2><p>Cost function $J(w,b)$ is some surface abov horizontal axes $w$ and $b$ in 3-dimension figure:<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/3dcost.png?raw=true" alt=""><br>Cost function is a <strong>convex function</strong>, so we are trying to find the local where $w$ and $b$ minimize enroll cost function. To find the global optimum, there is an algorithm called Gradient Descent.  Here are steps of Gradient Descent algorithm:</p>
+<ul>
+<li>1.Initialize $w$ and $b$ to some initial value;<ul>
+<li>Usually initialize the value to 0 or random initialization. <strong>Due to the function is convex, so any initial point will finally get to the same point.</strong></li>
+</ul>
+</li>
+<li>2.Takes a step in the steepest downhill direction from initial point.<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/onestep.png?raw=true" alt=""></li>
+<li>3.Takes some iterations until it get to the global optimum.</li>
+</ul>
+<p><br></p>
+<h4 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h4><p>For some details, we can fix b and have a look at $J(w)$:</p>
+<ul>
+<li>There has an initial point $w_0$</li>
+<li>Repeat:<script type="math/tex; mode=display">
+w_n := w_{n-1}-\alpha\frac{\mathrm{d}J(w)}{\mathrm{d}w}</script><ul>
+<li>$:=$ means update.</li>
+</ul>
+</li>
+<li>Get to local point.<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/cost_details.png?raw=true" alt=""><br><br></li>
+</ul>
+<p>In that iteration there are some notations:</p>
+<ul>
+<li>$\alpha$ <strong>means learning rate</strong> which controls how big a step should be taken on each iteration.</li>
+<li>$\frac{\mathrm{d}J(w)}{\mathrm{d}w}$ represents slope of the function and is basically change or update made to $w_n$<ul>
+<li>When coding, <code>dw</code> will represent this derivative.</li>
+</ul>
+</li>
+</ul>
+<p>So when we apply this to cost function, it becomes:</p>
+<script type="math/tex; mode=display">
+w := w-\alpha\frac{\partial J(w,b)}{\partial w}\\
+b := b-\alpha\frac{\partial J(w,b)}{\partial b}</script>
           
         
       
