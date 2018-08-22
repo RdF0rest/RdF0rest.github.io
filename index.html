@@ -382,7 +382,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-20 10:25:06" itemprop="dateModified" datetime="2018-08-20T10:25:06+08:00">2018-08-20</time>
+                <time title="Modified: 2018-08-22 23:19:40" itemprop="dateModified" datetime="2018-08-22T23:19:40+08:00">2018-08-22</time>
               
             
           </span>
@@ -442,7 +442,7 @@
 <p>To turn the RGB matrices into feature vector, we have to unroll three matrices into one vector until we got a long feature vector listing out all the red, green and blue pixel intensity valures.</p>
 <p>We are going to train the Binary Classification model like this:</p>
 <script type="math/tex; mode=display">
-X(feature \quad vector) \longrightarrow MODEL \longrightarrow Y(label,\quad 0\quad or\quad 1)</script><h2 id="Notation"><a href="#Notation" class="headerlink" title="Notation"></a>Notation</h2><ul>
+X(feature \quad vector) \longrightarrow MODEL \longrightarrow Y(label,\quad 0\quad or\quad 1)</script><h3 id="Notation"><a href="#Notation" class="headerlink" title="Notation"></a>Notation</h3><ul>
 <li>$(x,y)$: single training example<ul>
 <li>$x \in \mathbb{R}^{n_x}$</li>
 <li>$y \in \{0,1\}$</li>
@@ -472,9 +472,9 @@ X \longrightarrow Model \longrightarrow \widehat Y = P(Y=1|X)</script><p>Paramet
 \widehat{y} = \sigma(w^Tx+b)\\
 \sigma(x) = \frac{1}{1+e^{-x}}</script>where $\sigma(x)$ called <strong>sigmoid function</strong>.<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/sigmoidFunction.png?raw=true" alt=""></li>
 </ul>
-<h3 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h3><p>The Logistic Regression Model is persuing to find an efficient relationship between X and Y so we want:</p>
+<h2 id="Cost-Function"><a href="#Cost-Function" class="headerlink" title="Cost Function"></a>Cost Function</h2><p>The Logistic Regression Model is persuing to find an efficient relationship between X and Y so we want:</p>
 <script type="math/tex; mode=display">
-\widehat{Y} = \sigma(w^TX+b) \approx Y</script><h5 id="Loss-error-function"><a href="#Loss-error-function" class="headerlink" title="Loss (error) function:"></a>Loss (error) function:</h5><p>Try to measure how good output $\widehat{y}$ is when the true label is $y$</p>
+\widehat{Y} = \sigma(w^TX+b) \approx Y</script><h3 id="Loss-error-function"><a href="#Loss-error-function" class="headerlink" title="Loss (error) function:"></a>Loss (error) function:</h3><p>Try to measure how good output $\widehat{y}$ is when the true label is $y$</p>
 <script type="math/tex; mode=display">
 L(\widehat{y},y) = -(y\log{\widehat{y}}+(1-y)\log{(1-\widehat{y})})</script><p>To demostate that it is getting better when Loss function is getting small, we have:</p>
 <p>\begin{aligned}<br>If y=1: &amp; \quad L(\widehat{y},y)=-\log{\widehat{y}} &amp;\longrightarrow L(\widehat{y},y) smaller, \widehat{y}  larger.\\<br>If y=0: &amp; \quad L(\widehat{y},y)=-\log{(1-\widehat{y})} &amp;\longrightarrow L(\widehat{y},y) larger, \widehat{y}  smaller.\\<br>\end{aligned}</p>
@@ -489,7 +489,7 @@ L(\widehat{y},y) = -(y\log{\widehat{y}}+(1-y)\log{(1-\widehat{y})})</script><p>T
 <li>3.Takes some iterations until it get to the global optimum.</li>
 </ul>
 <p><br></p>
-<h4 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h4><p>For some details, we can fix b and have a look at $J(w)$:</p>
+<h3 id="Details"><a href="#Details" class="headerlink" title="Details"></a>Details</h3><p>For some details, we can fix b and have a look at $J(w)$:</p>
 <ul>
 <li>There has an initial point $w_0$</li>
 <li>Repeat:<script type="math/tex; mode=display">
@@ -510,7 +510,23 @@ w_n := w_{n-1}-\alpha\frac{\mathrm{d}J(w)}{\mathrm{d}w}</script><ul>
 <p>So when we apply this to cost function, it becomes:</p>
 <script type="math/tex; mode=display">
 w := w-\alpha\frac{\partial J(w,b)}{\partial w}\\
-b := b-\alpha\frac{\partial J(w,b)}{\partial b}</script>
+b := b-\alpha\frac{\partial J(w,b)}{\partial b}</script><h2 id="Computation-Graph-and-It’s-Derivatives"><a href="#Computation-Graph-and-It’s-Derivatives" class="headerlink" title="Computation Graph and It’s Derivatives"></a>Computation Graph and It’s Derivatives</h2><p>Takes $J(a,b,c) = 3(a+bc)$ for an example:<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/computationgraph.png?raw=true" alt=""><br>And Now we want to find out $\frac{\mathrm{d} J}{\mathrm{d} v}$, which is obviously equals 3, called a <strong>one step of backpropagation.</strong><br>Consider about $a$. If you are changing $a$ and then that will change $v$. And through chaning $v$, that would change $J$, which in math is <strong>chain rule</strong>:</p>
+<script type="math/tex; mode=display">
+\frac{\partial J}{\partial a} = \frac{\mathrm{d} J}{\mathrm{d} v}\frac{\mathrm{d} v}{\mathrm{d} a}</script><p>also plays as <strong>second step of backpropagation</strong>.</p>
+<ul>
+<li>while in coding, the derivative below can be represented by <code>dvar</code> and in this case there is <code>da</code><br>So after we work through the Computation graph, we will finish backpropagation computation.<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/backpropagation.png?raw=true" alt=""></li>
+</ul>
+<h2 id="Logistic-Regression-Gradient-decent"><a href="#Logistic-Regression-Gradient-decent" class="headerlink" title="Logistic Regression Gradient decent"></a>Logistic Regression Gradient decent</h2><h3 id="For-single-example-with-loss-function"><a href="#For-single-example-with-loss-function" class="headerlink" title="For single example with loss function"></a>For single example with loss function</h3><p>In a Logistic Regression, we need to find $w$ and $b$ to minimize the loss function. The computation graph is like:<br><img src="https://github.com/RdF0rest/images/blob/master/DeepLearning/computationgraph2.png?raw=true" alt=""><br>Let’s try to calculate the derivatives of $w$ and $b$:<br>For $a$, there has</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d} L}{\mathrm{d} a} = -\frac{y}{a}+\frac{1-y}{1-a}</script><p>And go for $z$:</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d} L}{\mathrm{d} z} = \frac{\mathrm{d} L}{\mathrm{d} a} \frac{\mathrm{d} a}{\mathrm{d} z} = (-\frac{y}{a}+\frac{1-y}{1-a})\dot [a(1-a)] = a-y</script><p>Finally, we can calculate derivatives of $w$ and $b$:</p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{d} L}{\mathrm{d} w_1} = x_1(a-y), \quad \frac{\mathrm{d} L}{\mathrm{d} w_2} = x_2(a-y), \quad
+\frac{\mathrm{d} L}{\mathrm{d} b} = (a-y)</script><h3 id="For-m-examples-with-cost-function"><a href="#For-m-examples-with-cost-function" class="headerlink" title="For $m$ examples with cost function"></a>For $m$ examples with cost function</h3><p>We have know the derivative of $w$ and $b$ and $J(w,b) = \frac{1}{m}\sum_{i=1}^m{L(\widehat{y}^{(i)},y^{(i)})}$, so we can obtain:</p>
+<script type="math/tex; mode=display">
+\frac{\mathrm{d} J(w,b)}{\mathrm{d} w_1} = \frac{1}{m}\sum_{i=1}^m{\frac{\mathrm{d}}{\mathrm{d} w_1}L(\widehat{y}^{(i)},y^{(i)})}</script><p>which gives us an <strong>overoll gradient</strong>.</p>
+<h2 id="Pesudocode"><a href="#Pesudocode" class="headerlink" title="Pesudocode"></a>Pesudocode</h2><p>For one strp in gradient decent in Logistic Regression:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">J = 0; dw_1 = 0; dw_2 = 0; db = 0;</span><br><span class="line">For i in 1 to m:</span><br><span class="line">    zi = wt * xi + b</span><br><span class="line">    ai = sigmoid(zi)</span><br><span class="line">    J += -(yi*log(ai)+(1-yi)*log(1-ai))</span><br><span class="line">    dzi = ai-yi</span><br><span class="line">    dw_1 += xi_1*dzi</span><br><span class="line">    dw_2 += xi_2*dzi</span><br><span class="line">    db   += dzi</span><br><span class="line"></span><br><span class="line">J /= m; dw_1 /= m; dw_2 /= m; db /= m;</span><br><span class="line">w_1 = w_1 - alpha * dw_1</span><br><span class="line">w_2 = w_2 - alpha * dw_2</span><br><span class="line">b = b - alpha * db</span><br></pre></td></tr></table></figure></p>
+<p>Using <strong>vectorization</strong> to get ride of for loop.</p>
+
           
         
       
@@ -626,7 +642,7 @@ b := b-\alpha\frac{\partial J(w,b)}{\partial b}</script>
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-10 08:23:06" itemprop="dateModified" datetime="2018-08-10T08:23:06+08:00">2018-08-10</time>
+                <time title="Modified: 2018-08-20 11:00:15" itemprop="dateModified" datetime="2018-08-20T11:00:15+08:00">2018-08-20</time>
               
             
           </span>
@@ -720,7 +736,7 @@ H_n \le G_n \le A_n \le Q_n</script><p>and those equalities hold if $x_1 = x_2 =
 <script type="math/tex; mode=display">
 A_{n+1} \ge G_{n+1}</script><p> So the proof has been completed.　　　　　　　　　　　　　　　　　　　　　　　　　$\square$</p>
 <hr>
-<h3 id="Proofs-by-Lagrange-Multipliers"><a href="#Proofs-by-Lagrange-Multipliers" class="headerlink" title="Proofs by Lagrange Multipliers"></a>Proofs by Lagrange Multipliers</h3><p> Suppose that $a_1a_2\cdots a_n=a$ and define the Lagrangian expression as</p>
+<h4 id="Proofs-by-Lagrange-Multipliers"><a href="#Proofs-by-Lagrange-Multipliers" class="headerlink" title="Proofs by Lagrange Multipliers"></a>Proofs by Lagrange Multipliers</h4><p> Suppose that $a_1a_2\cdots a_n=a$ and define the Lagrangian expression as</p>
 <script type="math/tex; mode=display">
 F = a_1+a_2+\cdots +a_n+\lambda(a_1a_2\cdots a_n-a)</script><p>Let</p>
 <script type="math/tex; mode=display">
