@@ -258,9 +258,9 @@
         
         
           
-          <li class="menu-item menu-item-football">
-    <a href="/football/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-circle"></i> <br />Football</a>
+          <li class="menu-item menu-item-multivariate">
+    <a href="/categories/multivariate/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-circle"></i> <br />multivariate</a>
   </li>
         
         
@@ -303,6 +303,401 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rdf0rest.github.io/2019/04/26/mahalanobis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tony">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rd's F0rest">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/04/26/mahalanobis/" itemprop="url">
+                  距离的度量
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-04-26 21:40:27" itemprop="dateCreated datePublished" datetime="2019-04-26T21:40:27+08:00">2019-04-26</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-05-05 16:17:36" itemprop="dateModified" datetime="2019-05-05T16:17:36+08:00">2019-05-05</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/multivariate/" itemprop="url" rel="index"><span itemprop="name">multivariate</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="距离的度量方法"><a href="#距离的度量方法" class="headerlink" title="距离的度量方法"></a>距离的度量方法</h1><h2 id="什么是欧氏距离"><a href="#什么是欧氏距离" class="headerlink" title="什么是欧氏距离"></a>什么是欧氏距离</h2><p>欧几里得度量是指$n$维空间中两个点的真实距离，为</p>
+<script type="math/tex; mode=display">
+d(x,y)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}</script><h2 id="什么是马氏距离"><a href="#什么是马氏距离" class="headerlink" title="什么是马氏距离"></a>什么是马氏距离</h2><p>马氏距离是用来表示<strong>数据的协方差距离</strong>。不同于欧氏距离，马氏距离考虑了变量之间的相关关系，并且与尺度无关。<br>对于一个均值为$\boldsymbol{\mu}$，协方差矩阵为$\boldsymbol{\Sigma}$的多元变量$\boldsymbol{x}$，马氏距离有如下表示:</p>
+<script type="math/tex; mode=display">
+D_M(\boldsymbol{x})=\sqrt{(\boldsymbol{x}-\boldsymbol{\mu})^T\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu})}</script><ul>
+<li>如果协方差矩阵为单位矩阵，则马氏距离退化为欧氏距离</li>
+<li>如果协方差矩阵为对角阵，则可称之为正规化的马氏距离</li>
+</ul>
+<h1 id="马氏距离的实际意义"><a href="#马氏距离的实际意义" class="headerlink" title="马氏距离的实际意义"></a>马氏距离的实际意义</h1><h2 id="欧式距离的不足"><a href="#欧式距离的不足" class="headerlink" title="欧式距离的不足"></a>欧式距离的不足</h2><ul>
+<li>当两个变量具有不同的尺度时（比如身高和体重），使用欧氏距离无法得出两个变量是否相似的结论。</li>
+<li>即使是归一化后的欧氏距离，依然无法处理具有分布的变量间距离问题，如下图的$A$点和$B$点<br><img src="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_1.png?raw=true" alt=""><br>在归一化的欧氏距离中，显然这两点距离原点的长度相等。但是由于样本的分布沿着$x$轴分布，因此直观上来看$B$点更倾向于称为样本中的点，而$A$点则可能是离群点。</li>
+<li>如果维度间不独立同分布，即有$y=ax+b$，有<br><img src="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_2.png?raw=true" alt=""><br>在这时由于即使进行数据标准化，也不会改变$A,B$与原点之间距离的<strong>相互关系</strong>。因此我们考虑构建马氏距离。</li>
+</ul>
+<h2 id="马氏距离的几何意义"><a href="#马氏距离的几何意义" class="headerlink" title="马氏距离的几何意义"></a>马氏距离的几何意义</h2><p>马氏距离的构建，是依靠维度间相互独立的基础上进行标准化后的欧氏距离。因此对于变量间不独立同分布的情况下，采用<strong>主成分分析(PCA)</strong>，将变量按照主成分方向旋转使得维度独立，再进行标准化操作。由PCA可知，旋转后的变量方向为特征向量的方向，方差为其对应的特征值。因此得到结果为:<br><img src="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_3.png?raw=true" alt=""><br>可以看出，此时欧氏距离即是我们所求的马氏距离。</p>
+<h2 id="马氏距离的推导"><a href="#马氏距离的推导" class="headerlink" title="马氏距离的推导"></a>马氏距离的推导</h2><p>由主成分分析给出的结果，令 $\boldsymbol{U}=(\boldsymbol{u_1},\boldsymbol{u_2},\dots,\boldsymbol{u_m})$ 为样本<strong>协方差矩阵</strong>的特征向量，$\lambda_1,\lambda_2, \dots, \lambda_m$分别为其对应的特征值，令 $\boldsymbol{F}$ 为根据主成分旋转过后的相互独立的向量，有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\boldsymbol{F}&=(\boldsymbol{F}_1,\boldsymbol{F}_2,\dots,\boldsymbol{F}_m)=\boldsymbol{U}^T\boldsymbol{X}\\
+\boldsymbol{\mu}_F&=(\boldsymbol{\mu}_1,\boldsymbol{\mu}_2,\dots,\boldsymbol{\mu}_m)\\
+(\boldsymbol{F}-\boldsymbol{\mu}_F)&=\boldsymbol{U}^T(\boldsymbol{X}-\boldsymbol{\mu}_X)
+\end{aligned}</script><p>由主成分分析的性质，变换后的主成分之间相互独立，且方差为特征值，即有</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+\mathrm{Cov}
+(\boldsymbol{F}-\boldsymbol{\mu}_F)&=
+\begin{bmatrix}
+\lambda_1 & & & \\
+& \lambda_2 & & \\
+& & \ddots & \\
+& & & \lambda_m \\
+\end{bmatrix}\\
+&=\boldsymbol{U}^T\mathrm{Cov}(\boldsymbol{X}-\boldsymbol{\mu}_X)\boldsymbol{U}\\
+&=\boldsymbol{U}^T\boldsymbol{\Sigma}_X\boldsymbol{U}
+\end{aligned}</script><p>马氏距离是在进行主成分旋转过后的欧氏距离，因此马氏距离的计算公式为</p>
+<script type="math/tex; mode=display">
+\begin{aligned}
+D_M&=(\frac{f_1-\mu_{F_1}}{\sqrt{\lambda_1}})^2+(\frac{f_2-\mu_{F_2}}{\sqrt{\lambda_2}})^2+\cdots+(\frac{f_m-\mu_{F_m}}{\sqrt{\lambda_m}})^2\\
+&=(f_1-\mu_{F_1},f_2-\mu_{F_2},\dots,f_m-\mu_{F_m})
+\begin{pmatrix}
+\frac{1}{\lambda_1} & & & \\
+& \frac{1}{\lambda_2} & & \\
+& & \ddots & \\
+& & & \frac{1}{\lambda_m}
+\end{pmatrix}
+\begin{pmatrix}
+f_1-\mu_{F_1} \\
+f_2-\mu_{F_2} \\
+\vdots\\
+f_m-\mu_{F_m}\\
+\end{pmatrix}\\
+&=(\boldsymbol{F}-\boldsymbol{\mu}_F)^T(\boldsymbol{U}^T\boldsymbol{\Sigma}_X\boldsymbol{U})^{-1}(\boldsymbol{F}-\boldsymbol{\mu}_F)\\
+&=(\boldsymbol{X}-\boldsymbol{\mu}_X)^T\boldsymbol{\Sigma}_X^{-1}(\boldsymbol{X}-\boldsymbol{\mu}_X)
+\end{aligned}</script>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rdf0rest.github.io/2019/01/13/Linux_Server/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tony">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rd's F0rest">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/13/Linux_Server/" itemprop="url">
+                  linux服务器配置
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-01-13 18:36:48" itemprop="dateCreated datePublished" datetime="2019-01-13T18:36:48+08:00">2019-01-13</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-01-22 16:51:47" itemprop="dateModified" datetime="2019-01-22T16:51:47+08:00">2019-01-22</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/deeplearning/" itemprop="url" rel="index"><span itemprop="name">deeplearning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>服务器ssh设置:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure></p>
+<p>注意使用root用户去改写</p>
+<h2 id="Linux基本命令"><a href="#Linux基本命令" class="headerlink" title="Linux基本命令"></a>Linux基本命令</h2><h3 id="关机"><a href="#关机" class="headerlink" title="关机"></a>关机</h3><ul>
+<li><code>halt [-n][-w][-d][-i][-p]</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1451,7 +1846,7 @@ y = \frac{10}{x^2}\cos(\frac{100}{x})</script>
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1468,7 +1863,9 @@ y = \frac{10}{x^2}\cos(\frac{100}{x})</script>
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -1489,7 +1886,9 @@ y = \frac{10}{x^2}\cos(\frac{100}{x})</script>
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -1536,7 +1935,7 @@ y = \frac{10}{x^2}\cos(\frac{100}{x})</script>
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -1708,6 +2107,10 @@ y = \frac{10}{x^2}\cos(\frac{100}{x})</script>
     
       
         
+      
+    
+      
+    
       
     
       

@@ -102,18 +102,22 @@
 
 
 
-  <meta name="description" content="Proof of QAGH Inequality The QM-AM-GM-HM or QAGH inequality generalizes the basic result of the arithmetic mean-geometric mean (AM-GM) inequality, which compares the arithmetic mean (AM) and geometric">
-<meta name="keywords" content="数学证明">
+  <meta name="description" content="距离的度量方法什么是欧氏距离欧几里得度量是指$n$维空间中两个点的真实距离，为  d(x,y)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}什么是马氏距离马氏距离是用来表示数据的协方差距离。不同于欧氏距离，马氏距离考虑了变量之间的相关关系，并且与尺度无关。对于一个均值为$\boldsymbol{\mu}$，协方差矩阵为$\boldsymbol{\Sigma}$的多元变量$\bold">
+<meta name="keywords" content="多元">
 <meta property="og:type" content="article">
-<meta property="og:title" content="QAGH Inequality">
-<meta property="og:url" content="https://rdf0rest.github.io/2018/08/09/QAGH_Inequality/index.html">
+<meta property="og:title" content="距离的度量">
+<meta property="og:url" content="https://rdf0rest.github.io/2019/04/26/mahalanobis/index.html">
 <meta property="og:site_name" content="Rd&#39;s F0rest">
-<meta property="og:description" content="Proof of QAGH Inequality The QM-AM-GM-HM or QAGH inequality generalizes the basic result of the arithmetic mean-geometric mean (AM-GM) inequality, which compares the arithmetic mean (AM) and geometric">
+<meta property="og:description" content="距离的度量方法什么是欧氏距离欧几里得度量是指$n$维空间中两个点的真实距离，为  d(x,y)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}什么是马氏距离马氏距离是用来表示数据的协方差距离。不同于欧氏距离，马氏距离考虑了变量之间的相关关系，并且与尺度无关。对于一个均值为$\boldsymbol{\mu}$，协方差矩阵为$\boldsymbol{\Sigma}$的多元变量$\bold">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-20T03:00:15.585Z">
+<meta property="og:image" content="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_1.png?raw=true">
+<meta property="og:image" content="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_2.png?raw=true">
+<meta property="og:image" content="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_3.png?raw=true">
+<meta property="og:updated_time" content="2019-05-05T08:17:36.215Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QAGH Inequality">
-<meta name="twitter:description" content="Proof of QAGH Inequality The QM-AM-GM-HM or QAGH inequality generalizes the basic result of the arithmetic mean-geometric mean (AM-GM) inequality, which compares the arithmetic mean (AM) and geometric">
+<meta name="twitter:title" content="距离的度量">
+<meta name="twitter:description" content="距离的度量方法什么是欧氏距离欧几里得度量是指$n$维空间中两个点的真实距离，为  d(x,y)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}什么是马氏距离马氏距离是用来表示数据的协方差距离。不同于欧氏距离，马氏距离考虑了变量之间的相关关系，并且与尺度无关。对于一个均值为$\boldsymbol{\mu}$，协方差矩阵为$\boldsymbol{\Sigma}$的多元变量$\bold">
+<meta name="twitter:image" content="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_1.png?raw=true">
 
 
 
@@ -122,7 +126,7 @@
 
 
 
-  <link rel="canonical" href="https://rdf0rest.github.io/2018/08/09/QAGH_Inequality/"/>
+  <link rel="canonical" href="https://rdf0rest.github.io/2019/04/26/mahalanobis/"/>
 
 
 
@@ -132,7 +136,7 @@
   };
 </script>
 
-  <title>QAGH Inequality | Rd's F0rest</title>
+  <title>距离的度量 | Rd's F0rest</title>
   
 
 
@@ -323,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rdf0rest.github.io/2018/08/09/QAGH_Inequality/">
+    <link itemprop="mainEntityOfPage" href="https://rdf0rest.github.io/2019/04/26/mahalanobis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tony">
@@ -340,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">QAGH Inequality
+          <h1 class="post-title" itemprop="name headline">距离的度量
               
             
           </h1>
@@ -365,7 +369,7 @@
                 
               
 
-              <time title="Created: 2018-08-09 15:29:53" itemprop="dateCreated datePublished" datetime="2018-08-09T15:29:53+08:00">2018-08-09</time>
+              <time title="Created: 2019-04-26 21:40:27" itemprop="dateCreated datePublished" datetime="2019-04-26T21:40:27+08:00">2019-04-26</time>
             
 
             
@@ -382,7 +386,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2018-08-20 11:00:15" itemprop="dateModified" datetime="2018-08-20T11:00:15+08:00">2018-08-20</time>
+                <time title="Modified: 2019-05-05 16:17:36" itemprop="dateModified" datetime="2019-05-05T16:17:36+08:00">2019-05-05</time>
               
             
           </span>
@@ -399,7 +403,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/multivariate/" itemprop="url" rel="index"><span itemprop="name">multivariate</span></a></span>
 
                 
                 
@@ -414,8 +418,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/08/09/QAGH_Inequality/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/09/QAGH_Inequality/" itemprop="commentsCount"></span>
+                <a href="/2019/04/26/mahalanobis/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/2019/04/26/mahalanobis/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -443,69 +447,59 @@
       
 
       
-        <h1 id="Proof-of-QAGH-Inequality"><a href="#Proof-of-QAGH-Inequality" class="headerlink" title="Proof of QAGH Inequality"></a>Proof of QAGH Inequality</h1><blockquote>
-<p>The <strong>QM-AM-GM-HM</strong> or <strong>QAGH inequality</strong> generalizes the basic result of the arithmetic mean-geometric mean (AM-GM) inequality, which compares the arithmetic mean (AM) and geometric mean (GM), to include a comparison of the quadratic mean (QM) and harmonic mean (HM).</p>
-</blockquote>
-<ul>
-<li>QM(<strong>Quadratic Mean</strong>):
-$$Q_n = \sqrt{\frac{\sum_{i=1}^n{{x_i}^2}}{n}} = \sqrt{\frac{x_1^2+x_2^2+\cdots+x_n^2}{n}}$$
-</li>
-<li>AM(<strong>Arithmetic Mean</strong>):
-$$
-A_n = \frac{\sum_{i=1}^n{x_i}}{n}= \frac{x_1+x_2+\cdots+x_n}{n}
-$$
-</li>
-<li>GM(<strong>Geometric Mean</strong>):
-$$
-G_n = \sqrt[n]{\prod_{i=1}^n{x_i}}=\sqrt[n]{x_1x_2\cdots x_n}
-$$
-</li>
-<li>HM(<strong>Harmonic Mean</strong>):
-$$
-H_n = \frac{n}{\sum_{i=1}^n{\frac{1}{x_i}}}=\frac{n}{\frac{1}{x_1}+\frac{1}{x_2}+\cdots+\frac{1}{x_n}}
-$$
-
-</li>
+        <h1 id="距离的度量方法"><a href="#距离的度量方法" class="headerlink" title="距离的度量方法"></a>距离的度量方法</h1><h2 id="什么是欧氏距离"><a href="#什么是欧氏距离" class="headerlink" title="什么是欧氏距离"></a>什么是欧氏距离</h2><p>欧几里得度量是指$n$维空间中两个点的真实距离，为</p>
+<script type="math/tex; mode=display">
+d(x,y)=\sqrt{\sum_{i=1}^n(x_i-y_i)^2}</script><h2 id="什么是马氏距离"><a href="#什么是马氏距离" class="headerlink" title="什么是马氏距离"></a>什么是马氏距离</h2><p>马氏距离是用来表示<strong>数据的协方差距离</strong>。不同于欧氏距离，马氏距离考虑了变量之间的相关关系，并且与尺度无关。<br>对于一个均值为$\boldsymbol{\mu}$，协方差矩阵为$\boldsymbol{\Sigma}$的多元变量$\boldsymbol{x}$，马氏距离有如下表示:</p>
+<script type="math/tex; mode=display">
+D_M(\boldsymbol{x})=\sqrt{(\boldsymbol{x}-\boldsymbol{\mu})^T\boldsymbol{\Sigma}^{-1}(\boldsymbol{x}-\boldsymbol{\mu})}</script><ul>
+<li>如果协方差矩阵为单位矩阵，则马氏距离退化为欧氏距离</li>
+<li>如果协方差矩阵为对角阵，则可称之为正规化的马氏距离</li>
 </ul>
-<p>For any list of $n$ nonnegtive real numbers $x_1,x_2,\cdots,x_n$,</p>
+<h1 id="马氏距离的实际意义"><a href="#马氏距离的实际意义" class="headerlink" title="马氏距离的实际意义"></a>马氏距离的实际意义</h1><h2 id="欧式距离的不足"><a href="#欧式距离的不足" class="headerlink" title="欧式距离的不足"></a>欧式距离的不足</h2><ul>
+<li>当两个变量具有不同的尺度时（比如身高和体重），使用欧氏距离无法得出两个变量是否相似的结论。</li>
+<li>即使是归一化后的欧氏距离，依然无法处理具有分布的变量间距离问题，如下图的$A$点和$B$点<br><img src="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_1.png?raw=true" alt=""><br>在归一化的欧氏距离中，显然这两点距离原点的长度相等。但是由于样本的分布沿着$x$轴分布，因此直观上来看$B$点更倾向于称为样本中的点，而$A$点则可能是离群点。</li>
+<li>如果维度间不独立同分布，即有$y=ax+b$，有<br><img src="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_2.png?raw=true" alt=""><br>在这时由于即使进行数据标准化，也不会改变$A,B$与原点之间距离的<strong>相互关系</strong>。因此我们考虑构建马氏距离。</li>
+</ul>
+<h2 id="马氏距离的几何意义"><a href="#马氏距离的几何意义" class="headerlink" title="马氏距离的几何意义"></a>马氏距离的几何意义</h2><p>马氏距离的构建，是依靠维度间相互独立的基础上进行标准化后的欧氏距离。因此对于变量间不独立同分布的情况下，采用<strong>主成分分析(PCA)</strong>，将变量按照主成分方向旋转使得维度独立，再进行标准化操作。由PCA可知，旋转后的变量方向为特征向量的方向，方差为其对应的特征值。因此得到结果为:<br><img src="https://github.com/RdF0rest/images/blob/master/MultiVariate/M_3.png?raw=true" alt=""><br>可以看出，此时欧氏距离即是我们所求的马氏距离。</p>
+<h2 id="马氏距离的推导"><a href="#马氏距离的推导" class="headerlink" title="马氏距离的推导"></a>马氏距离的推导</h2><p>由主成分分析给出的结果，令 $\boldsymbol{U}=(\boldsymbol{u_1},\boldsymbol{u_2},\dots,\boldsymbol{u_m})$ 为样本<strong>协方差矩阵</strong>的特征向量，$\lambda_1,\lambda_2, \dots, \lambda_m$分别为其对应的特征值，令 $\boldsymbol{F}$ 为根据主成分旋转过后的相互独立的向量，有</p>
 <script type="math/tex; mode=display">
-H_n \le G_n \le A_n \le Q_n</script><p>and those equalities hold if $x_1 = x_2 = \cdots = x_n$.</p>
-<h2 id="Proofs"><a href="#Proofs" class="headerlink" title="Proofs"></a>Proofs</h2><h3 id="Proofs-of-the-AM–GM-inequality"><a href="#Proofs-of-the-AM–GM-inequality" class="headerlink" title="Proofs of the AM–GM inequality"></a>Proofs of the AM–GM inequality</h3><h4 id="Proofs-by-math-induction"><a href="#Proofs-by-math-induction" class="headerlink" title="Proofs by math induction"></a>Proofs by math induction</h4><p> For $n = 1$, the statement is true with equality.<br> For $n = 2$, there has:</p>
+\begin{aligned}
+\boldsymbol{F}&=(\boldsymbol{F}_1,\boldsymbol{F}_2,\dots,\boldsymbol{F}_m)=\boldsymbol{U}^T\boldsymbol{X}\\
+\boldsymbol{\mu}_F&=(\boldsymbol{\mu}_1,\boldsymbol{\mu}_2,\dots,\boldsymbol{\mu}_m)\\
+(\boldsymbol{F}-\boldsymbol{\mu}_F)&=\boldsymbol{U}^T(\boldsymbol{X}-\boldsymbol{\mu}_X)
+\end{aligned}</script><p>由主成分分析的性质，变换后的主成分之间相互独立，且方差为特征值，即有</p>
 <script type="math/tex; mode=display">
- (x_1-x_2)^2 \ge 0\\
- x_1^2 + x_2^2 + 2x_1x_2 - 4x_1x_2 \ge 0\\
- (x_1+x_2)^2 \ge 4x_1x_2\\
- \frac{x_1+x_2}{2} \ge \sqrt{x_1x_2}</script><p> Suppose that $G_n \le A_n$, there also has $x_{n+1}+(n-1)G_{n+1} \ge n\sqrt[n]{x_{n+1}G_{n+1}^{n-1}}$,<br> Thus:</p>
+\begin{aligned}
+\mathrm{Cov}
+(\boldsymbol{F}-\boldsymbol{\mu}_F)&=
+\begin{bmatrix}
+\lambda_1 & & & \\
+& \lambda_2 & & \\
+& & \ddots & \\
+& & & \lambda_m \\
+\end{bmatrix}\\
+&=\boldsymbol{U}^T\mathrm{Cov}(\boldsymbol{X}-\boldsymbol{\mu}_X)\boldsymbol{U}\\
+&=\boldsymbol{U}^T\boldsymbol{\Sigma}_X\boldsymbol{U}
+\end{aligned}</script><p>马氏距离是在进行主成分旋转过后的欧氏距离，因此马氏距离的计算公式为</p>
 <script type="math/tex; mode=display">
- \frac{x_1+x_2+\cdots+x_n+x_{n+1}+(n-1)G_{n+1}}{n} \ge G_n+\sqrt[n]{x_{n+1}G_{n+1}^{n-1}}
- \ge 2\sqrt[2n]{G^n_nx_{n+1}G_{n+1}^{n-1}} = 2G_{n+1}</script><p> Hence</p>
-<script type="math/tex; mode=display">
-(n+1)A_{n+1} = x_1+x_2+\cdots+x_n+x_{n+1} \ge 2nG_{n+1}-(n-1)G_{n+1} = (n+1)G_{n+1}</script><p> which can obtain</p>
-<script type="math/tex; mode=display">
-A_{n+1} \ge G_{n+1}</script><p> So the proof has been completed.　　　　　　　　　　　　　　　　　　　　　　　　　$\square$</p>
-<hr>
-<h4 id="Proofs-by-Lagrange-Multipliers"><a href="#Proofs-by-Lagrange-Multipliers" class="headerlink" title="Proofs by Lagrange Multipliers"></a>Proofs by Lagrange Multipliers</h4><p> Suppose that $a_1a_2\cdots a_n=a$ and define the Lagrangian expression as</p>
-<script type="math/tex; mode=display">
-F = a_1+a_2+\cdots +a_n+\lambda(a_1a_2\cdots a_n-a)</script><p>Let</p>
-<script type="math/tex; mode=display">
-  \left\{
-   \begin{aligned}
-   F^{\prime}_{a_1}&=1+\lambda a_2a_3\cdots a_n = 0,\\
-   F^{\prime}_{a_2}&=1+\lambda a_1a_3\cdots a_n = 0,\\
-   & \qquad \quad \cdots \cdots \\
-   F^{\prime}_{a_n}&=1+\lambda a_1a_2\cdots a_{n-1} = 0,\\
-   F^{\prime}_{\lambda}&=a_1a_2\cdots a_n-a = 0,
-   \end{aligned}
-  \right.</script><p>we have $a_1 = a_2 = \cdots = a_n = \sqrt[n]{a}$.<br>Due to that $a_1,a_2,\cdots,a_n&gt;0$, $a_1+a_2+\cdots+a_n$ only has minimum which is</p>
-<script type="math/tex; mode=display">
-\min\{a_1+a_2+\cdots+a_n\}=n\sqrt[n]{a}</script><p>imply that $a_1+a_2+\cdots+a_n \ge n\sqrt[n]{a} = n\sqrt[n]{a_1a_2\cdots a_n}$,<br>which completes the proof.　　　　　　　　　　　　　　　　　　　　　　　　　　　　$\square$<br> <br><br><br><br></p>
-<h3 id="Proofs-of-the-GM–HM-inequality"><a href="#Proofs-of-the-GM–HM-inequality" class="headerlink" title="Proofs of the GM–HM inequality"></a>Proofs of the GM–HM inequality</h3><p> For any list of $n$ nonnegtive real numbers $\frac{1}{a_1},\frac{1}{a_2},\cdots,\frac{1}{a_n}$, with $A_{n+1} \ge G_{n+1}$, we have</p>
-<script type="math/tex; mode=display">
- \frac{\frac{1}{a_1}+\frac{1}{a_2}+\cdots+\frac{1}{a_n}}{n} \ge \sqrt[n]{\frac{1}{a_1}\cdot \frac{1}{a_2}\cdot \cdots \cdot \frac{1}{a_n}} = \frac{1}{\sqrt[n]{a_1a_2\cdots a_n}}</script><p>Taking reciprocal of both sides of the equation, we have</p>
-<script type="math/tex; mode=display">
-\frac{n}{\frac{1}{a_1}+\frac{1}{a_2}+\cdots+\frac{1}{a_n}} \le \sqrt[n]{a_1a_2\cdots a_n}</script><p>which completes the proof.　　　　　　　　　　　　　　　　　　　　　　　　　　　　$\square$<br><br><br><br><br></p>
-<h3 id="Proofs-of-the-QM–AM-inequality"><a href="#Proofs-of-the-QM–AM-inequality" class="headerlink" title="Proofs of the QM–AM inequality"></a>Proofs of the QM–AM inequality</h3><p>Consider that $A_n \le Q_n$ equals $Q_n^2-A_n^2 &gt;0$,<br>so there has<br>\begin{aligned}<br> Q_n^2-A_n^2 = Q_n^2-2A_n^2 + A_n^2 &amp; = \frac{a_1^2+a_2^2+\cdots+a_n^2}{n}-\frac{2a_1A_n+2a_2A_n+\cdots+2a_nA_n}{n} + \frac{nA_n^2}{n}\\<br>&amp; =\frac{(a_1^2-2a_1A_n+A_n^2)+(a_2^2-2a_2A_n+A_n^2)+\cdots+(a_n^2-2a_nA_n+A_n^2)}{n}\\<br>&amp; =\frac{(a_1-A_n)^2+(a_2-A_n)^2+\cdots+(a_n-A_n)^2}{n}\\<br>&amp; \ge 0<br>\end{aligned}<br>This completes the proof.　　　　　　　　　　　　　　　　　　　　　　　　　　　　$\square$</p>
-
+\begin{aligned}
+D_M&=(\frac{f_1-\mu_{F_1}}{\sqrt{\lambda_1}})^2+(\frac{f_2-\mu_{F_2}}{\sqrt{\lambda_2}})^2+\cdots+(\frac{f_m-\mu_{F_m}}{\sqrt{\lambda_m}})^2\\
+&=(f_1-\mu_{F_1},f_2-\mu_{F_2},\dots,f_m-\mu_{F_m})
+\begin{pmatrix}
+\frac{1}{\lambda_1} & & & \\
+& \frac{1}{\lambda_2} & & \\
+& & \ddots & \\
+& & & \frac{1}{\lambda_m}
+\end{pmatrix}
+\begin{pmatrix}
+f_1-\mu_{F_1} \\
+f_2-\mu_{F_2} \\
+\vdots\\
+f_m-\mu_{F_m}\\
+\end{pmatrix}\\
+&=(\boldsymbol{F}-\boldsymbol{\mu}_F)^T(\boldsymbol{U}^T\boldsymbol{\Sigma}_X\boldsymbol{U})^{-1}(\boldsymbol{F}-\boldsymbol{\mu}_F)\\
+&=(\boldsymbol{X}-\boldsymbol{\mu}_X)^T\boldsymbol{\Sigma}_X^{-1}(\boldsymbol{X}-\boldsymbol{\mu}_X)
+\end{aligned}</script>
       
     </div>
 
@@ -525,7 +519,7 @@ F = a_1+a_2+\cdots +a_n+\lambda(a_1a_2\cdots a_n-a)</script><p>Let</p>
       
         <div class="post-tags">
           
-            <a href="/tags/数学证明/" rel="tag"><i class="fa fa-tag"></i> 数学证明</a>
+            <a href="/tags/多元/" rel="tag"><i class="fa fa-tag"></i> 多元</a>
           
         </div>
       
@@ -538,8 +532,8 @@ F = a_1+a_2+\cdots +a_n+\lambda(a_1a_2\cdots a_n-a)</script><p>Let</p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/08/02/learning/" rel="next" title="Deep Learning Week 1|Note">
-                <i class="fa fa-chevron-left"></i> Deep Learning Week 1|Note
+              <a href="/2019/01/13/Linux_Server/" rel="next" title="linux服务器配置">
+                <i class="fa fa-chevron-left"></i> linux服务器配置
               </a>
             
           </div>
@@ -547,10 +541,6 @@ F = a_1+a_2+\cdots +a_n+\lambda(a_1a_2\cdots a_n-a)</script><p>Let</p>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/08/17/learning2/" rel="prev" title="Deep Learning Week 2|Note">
-                Deep Learning Week 2|Note <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -712,7 +702,7 @@ F = a_1+a_2+\cdots +a_n+\lambda(a_1a_2\cdots a_n-a)</script><p>Let</p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Proof-of-QAGH-Inequality"><span class="nav-number">1.</span> <span class="nav-text">Proof of QAGH Inequality</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Proofs"><span class="nav-number">1.1.</span> <span class="nav-text">Proofs</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Proofs-of-the-AM–GM-inequality"><span class="nav-number">1.1.1.</span> <span class="nav-text">Proofs of the AM–GM inequality</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Proofs-by-math-induction"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">Proofs by math induction</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Proofs-by-Lagrange-Multipliers"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">Proofs by Lagrange Multipliers</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Proofs-of-the-GM–HM-inequality"><span class="nav-number">1.1.2.</span> <span class="nav-text">Proofs of the GM–HM inequality</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Proofs-of-the-QM–AM-inequality"><span class="nav-number">1.1.3.</span> <span class="nav-text">Proofs of the QM–AM inequality</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#距离的度量方法"><span class="nav-number">1.</span> <span class="nav-text">距离的度量方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是欧氏距离"><span class="nav-number">1.1.</span> <span class="nav-text">什么是欧氏距离</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是马氏距离"><span class="nav-number">1.2.</span> <span class="nav-text">什么是马氏距离</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#马氏距离的实际意义"><span class="nav-number">2.</span> <span class="nav-text">马氏距离的实际意义</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#欧式距离的不足"><span class="nav-number">2.1.</span> <span class="nav-text">欧式距离的不足</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#马氏距离的几何意义"><span class="nav-number">2.2.</span> <span class="nav-text">马氏距离的几何意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#马氏距离的推导"><span class="nav-number">2.3.</span> <span class="nav-text">马氏距离的推导</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -885,7 +875,7 @@ F = a_1+a_2+\cdots +a_n+\lambda(a_1a_2\cdots a_n-a)</script><p>Let</p>
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1533799793000',
+            id: '1556286027000',
             owner: 'RdF0rest',
             repo: 'Gitment_comments',
             
