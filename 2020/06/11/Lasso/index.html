@@ -102,17 +102,19 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://rdf0rest.github.io/tags/index.html">
+  <meta name="description" content="有偏估计Lasso和岭回归的提出是为了解决回归中出现的多重共线性这一问题，即 $\boldsymbol{X}^T\boldsymbol{X}$不满秩的情况。不同于逐步回归，Lasso和岭回归同属于有偏估计。 由OLS估计的正规方程的解可知  \hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^">
+<meta name="keywords" content="算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lasso原理以及求解方法">
+<meta property="og:url" content="https://rdf0rest.github.io/2020/06/11/Lasso/index.html">
 <meta property="og:site_name" content="Rd&#39;s F0rest">
+<meta property="og:description" content="有偏估计Lasso和岭回归的提出是为了解决回归中出现的多重共线性这一问题，即 $\boldsymbol{X}^T\boldsymbol{X}$不满秩的情况。不同于逐步回归，Lasso和岭回归同属于有偏估计。 由OLS估计的正规方程的解可知  \hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-02T04:55:09.098Z">
+<meta property="og:updated_time" content="2020-06-11T09:15:57.232Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="Lasso原理以及求解方法">
+<meta name="twitter:description" content="有偏估计Lasso和岭回归的提出是为了解决回归中出现的多重共线性这一问题，即 $\boldsymbol{X}^T\boldsymbol{X}$不满秩的情况。不同于逐步回归，Lasso和岭回归同属于有偏估计。 由OLS估计的正规方程的解可知  \hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^">
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="Rd's F0rest" type="application/atom+xml" />
@@ -120,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="https://rdf0rest.github.io/tags/"/>
+  <link rel="canonical" href="https://rdf0rest.github.io/2020/06/11/Lasso/"/>
 
 
 
@@ -130,7 +132,7 @@
   };
 </script>
 
-  <title>tags | Rd's F0rest</title>
+  <title>Lasso原理以及求解方法 | Rd's F0rest</title>
   
 
 
@@ -228,7 +230,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />Tags</a>
   </li>
@@ -281,34 +283,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -335,72 +309,192 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rdf0rest.github.io/2020/06/11/Lasso/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tony">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rd's F0rest">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                5 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/多元/" style="font-size: 12px; color: #ccc">多元</a> <a href="/tags/数学证明/" style="font-size: 12px; color: #ccc">数学证明</a> <a href="/tags/算法/" style="font-size: 30px; color: #111">算法</a> <a href="/tags/考研/" style="font-size: 12px; color: #ccc">考研</a> <a href="/tags/随笔/" style="font-size: 12px; color: #ccc">随笔</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">Lasso原理以及求解方法
+              
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-06-11 18:36:48 / Modified: 17:15:57" itemprop="dateCreated datePublished" datetime="2020-06-11T18:36:48+08:00">2020-06-11</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/deeplearning/" itemprop="url" rel="index"><span itemprop="name">deeplearning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2020/06/11/Lasso/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/2020/06/11/Lasso/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="有偏估计"><a href="#有偏估计" class="headerlink" title="有偏估计"></a>有偏估计</h2><p>Lasso和岭回归的提出是为了解决回归中出现的多重共线性这一问题，即 $\boldsymbol{X}^T\boldsymbol{X}$不满秩的情况。不同于逐步回归，Lasso和岭回归同属于<strong>有偏估计</strong>。</p>
+<p>由OLS估计的正规方程的解可知</p>
+<script type="math/tex; mode=display">
+\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><p>当存在多重共线性的时候，会导致$\boldsymbol{X}^T\boldsymbol{X}$难以求逆。因此一个思想就是通过给$\boldsymbol{X}^T\boldsymbol{X}$加一个扰动项（通常为一个正常数矩阵$k\boldsymbol{I}(k&gt;0$）来解决这个问题，这就是有偏估计的思想。在有偏估计下，$\boldsymbol{\beta}$的估计值为</p>
+<script type="math/tex; mode=display">
+\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><h2 id="Lasso原理"><a href="#Lasso原理" class="headerlink" title="Lasso原理"></a>Lasso原理</h2><p>Lasso在参数估计的同事既可以对估计值进行压缩，也可以让一些不重要的变量的估计值恰好为0，从而达到变量选择的功能。Lasso回归等价于在OLS回归的基础上给估计值的大小增加一个约束:</p>
+<script type="math/tex; mode=display">
+\hat{\boldsymbol{\beta}}_{lasso} = \arg \min_{\boldsymbol{\beta}}\{\sum_{i=1}^n(y_i-\beta_0-\sum_{j=1}^p x_{ij}\beta_j)^2 + \lambda \sum_{j=1}^p|\beta_j|\}</script>
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/26/mahalanobis/" rel="next" title="距离的度量">
+                <i class="fa fa-chevron-left"></i> 距离的度量
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -437,8 +531,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -528,6 +631,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#有偏估计"><span class="nav-number">1.</span> <span class="nav-text">有偏估计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lasso原理"><span class="nav-number">2.</span> <span class="nav-text">Lasso原理</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -695,7 +814,7 @@
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '1533185413000',
+            id: '1591871808000',
             owner: 'RdF0rest',
             repo: 'Gitment_comments',
             
@@ -740,6 +859,30 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 

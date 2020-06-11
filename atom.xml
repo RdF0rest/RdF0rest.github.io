@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rdf0rest.github.io/"/>
-  <updated>2019-05-05T08:17:36.215Z</updated>
+  <updated>2020-06-11T09:15:57.232Z</updated>
   <id>https://rdf0rest.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Lasso原理以及求解方法</title>
+    <link href="https://rdf0rest.github.io/2020/06/11/Lasso/"/>
+    <id>https://rdf0rest.github.io/2020/06/11/Lasso/</id>
+    <published>2020-06-11T10:36:48.000Z</published>
+    <updated>2020-06-11T09:15:57.232Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="有偏估计"><a href="#有偏估计" class="headerlink" title="有偏估计"></a>有偏估计</h2><p>Lasso和岭回归的提出是为了解决回归中出现的多重共线性这一问题，即 $\boldsymbol{X}^T\boldsymbol{X}$不满秩的情况。不同于逐步回归，Lasso和岭回归同属于<strong>有偏估计</strong>。</p><p>由OLS估计的正规方程的解可知</p><script type="math/tex; mode=display">\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><p>当存在多重共线性的时候，会导致$\boldsymbol{X}^T\boldsymbol{X}$难以求逆。因此一个思想就是通过给$\boldsymbol{X}^T\boldsymbol{X}$加一个扰动项（通常为一个正常数矩阵$k\boldsymbol{I}(k&gt;0$）来解决这个问题，这就是有偏估计的思想。在有偏估计下，$\boldsymbol{\beta}$的估计值为</p><script type="math/tex; mode=display">\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><h2 id="Lasso原理"><a href="#Lasso原理" class="headerlink" title="Lasso原理"></a>Lasso原理</h2><p>Lasso在参数估计的同事既可以对估计值进行压缩，也可以让一些不重要的变量的估计值恰好为0，从而达到变量选择的功能。Lasso回归等价于在OLS回归的基础上给估计值的大小增加一个约束:</p><script type="math/tex; mode=display">\hat{\boldsymbol{\beta}}_{lasso} = \arg \min_{\boldsymbol{\beta}}\{\sum_{i=1}^n(y_i-\beta_0-\sum_{j=1}^p x_{ij}\beta_j)^2 + \lambda \sum_{j=1}^p|\beta_j|\}</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;有偏估计&quot;&gt;&lt;a href=&quot;#有偏估计&quot; class=&quot;headerlink&quot; title=&quot;有偏估计&quot;&gt;&lt;/a&gt;有偏估计&lt;/h2&gt;&lt;p&gt;Lasso和岭回归的提出是为了解决回归中出现的多重共线性这一问题，即 $\boldsymbol{X}^T\boldsymbo
+      
+    
+    </summary>
+    
+      <category term="deeplearning" scheme="https://rdf0rest.github.io/categories/deeplearning/"/>
+    
+    
+      <category term="算法" scheme="https://rdf0rest.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>距离的度量</title>

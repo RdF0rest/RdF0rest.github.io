@@ -319,6 +319,170 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://rdf0rest.github.io/2020/06/11/Lasso/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Tony">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Rd's F0rest">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/06/11/Lasso/" itemprop="url">
+                  Lasso原理以及求解方法
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-06-11 18:36:48 / Modified: 17:15:57" itemprop="dateCreated datePublished" datetime="2020-06-11T18:36:48+08:00">2020-06-11</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/deeplearning/" itemprop="url" rel="index"><span itemprop="name">deeplearning</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="有偏估计"><a href="#有偏估计" class="headerlink" title="有偏估计"></a>有偏估计</h2><p>Lasso和岭回归的提出是为了解决回归中出现的多重共线性这一问题，即 $\boldsymbol{X}^T\boldsymbol{X}$不满秩的情况。不同于逐步回归，Lasso和岭回归同属于<strong>有偏估计</strong>。</p>
+<p>由OLS估计的正规方程的解可知</p>
+<script type="math/tex; mode=display">
+\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><p>当存在多重共线性的时候，会导致$\boldsymbol{X}^T\boldsymbol{X}$难以求逆。因此一个思想就是通过给$\boldsymbol{X}^T\boldsymbol{X}$加一个扰动项（通常为一个正常数矩阵$k\boldsymbol{I}(k&gt;0$）来解决这个问题，这就是有偏估计的思想。在有偏估计下，$\boldsymbol{\beta}$的估计值为</p>
+<script type="math/tex; mode=display">
+\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><h2 id="Lasso原理"><a href="#Lasso原理" class="headerlink" title="Lasso原理"></a>Lasso原理</h2><p>Lasso在参数估计的同事既可以对估计值进行压缩，也可以让一些不重要的变量的估计值恰好为0，从而达到变量选择的功能。Lasso回归等价于在OLS回归的基础上给估计值的大小增加一个约束:</p>
+<script type="math/tex; mode=display">
+\hat{\boldsymbol{\beta}}_{lasso} = \arg \min_{\boldsymbol{\beta}}\{\sum_{i=1}^n(y_i-\beta_0-\sum_{j=1}^p x_{ij}\beta_j)^2 + \lambda \sum_{j=1}^p|\beta_j|\}</script>
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://rdf0rest.github.io/2019/04/26/mahalanobis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1672,7 +1836,7 @@ y = \frac{10}{x^2}\cos(\frac{100}{x})</script>
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1933,6 +2097,8 @@ y = \frac{10}{x^2}\cos(\frac{100}{x})</script>
     
       
         
+      
+    
       
     
       
