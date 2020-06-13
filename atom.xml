@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://rdf0rest.github.io/"/>
-  <updated>2020-06-11T09:15:57.232Z</updated>
+  <updated>2020-06-12T10:08:15.704Z</updated>
   <id>https://rdf0rest.github.io/</id>
   
   <author>
@@ -17,13 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>标准化、归一化和中心化</title>
+    <link href="https://rdf0rest.github.io/20120/06/12/standard/"/>
+    <id>https://rdf0rest.github.io/20120/06/12/standard/</id>
+    <published>+020120-06-12T13:40:27.000Z</published>
+    <updated>2020-06-12T10:08:15.704Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="标准化-Standardizing-Normalization"><a href="#标准化-Standardizing-Normalization" class="headerlink" title="标准化(Standardizing/Normalization)"></a>标准化(Standardizing/Normalization)</h2><p>数据的标准化是将数据按比例缩放，使之落入一个小的特定区间。在某些比较和评价的指标处理中经常会用到，去除数据的单位限制，将其转化为无量纲的纯数值，便于不同单位或量级的指标能够进行比较和加权。常用的标准化方法为:</p><script type="math/tex; mode=display">X^* = \frac{X-\mu}{\sigma}</script><p>经过标准化后的数据具有如下的性质:</p><ul><li>$E(X) = 0$</li><li>$D(X) = 1$</li></ul><h2 id="中心化-Zero-centering"><a href="#中心化-Zero-centering" class="headerlink" title="中心化(Zero-centering)"></a>中心化(Zero-centering)</h2><p>数据的中心化是指将数据的中心点(均值)归为0，而对其方差并无要求:</p><script type="math/tex; mode=display">X_{center} = X - \mu</script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;标准化-Standardizing-Normalization&quot;&gt;&lt;a href=&quot;#标准化-Standardizing-Normalization&quot; class=&quot;headerlink&quot; title=&quot;标准化(Standardizing/Normalizatio
+      
+    
+    </summary>
+    
+      <category term="multivariate" scheme="https://rdf0rest.github.io/categories/multivariate/"/>
+    
+    
+      <category term="多元" scheme="https://rdf0rest.github.io/tags/%E5%A4%9A%E5%85%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Lasso原理以及求解方法</title>
     <link href="https://rdf0rest.github.io/2020/06/11/Lasso/"/>
     <id>https://rdf0rest.github.io/2020/06/11/Lasso/</id>
     <published>2020-06-11T10:36:48.000Z</published>
-    <updated>2020-06-11T09:15:57.232Z</updated>
+    <updated>2020-06-12T11:06:08.521Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="有偏估计"><a href="#有偏估计" class="headerlink" title="有偏估计"></a>有偏估计</h2><p>Lasso和岭回归的提出是为了解决回归中出现的多重共线性这一问题，即 $\boldsymbol{X}^T\boldsymbol{X}$不满秩的情况。不同于逐步回归，Lasso和岭回归同属于<strong>有偏估计</strong>。</p><p>由OLS估计的正规方程的解可知</p><script type="math/tex; mode=display">\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><p>当存在多重共线性的时候，会导致$\boldsymbol{X}^T\boldsymbol{X}$难以求逆。因此一个思想就是通过给$\boldsymbol{X}^T\boldsymbol{X}$加一个扰动项（通常为一个正常数矩阵$k\boldsymbol{I}(k&gt;0$）来解决这个问题，这就是有偏估计的思想。在有偏估计下，$\boldsymbol{\beta}$的估计值为</p><script type="math/tex; mode=display">\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><h2 id="Lasso原理"><a href="#Lasso原理" class="headerlink" title="Lasso原理"></a>Lasso原理</h2><p>Lasso在参数估计的同事既可以对估计值进行压缩，也可以让一些不重要的变量的估计值恰好为0，从而达到变量选择的功能。Lasso回归等价于在OLS回归的基础上给估计值的大小增加一个约束:</p><script type="math/tex; mode=display">\hat{\boldsymbol{\beta}}_{lasso} = \arg \min_{\boldsymbol{\beta}}\{\sum_{i=1}^n(y_i-\beta_0-\sum_{j=1}^p x_{ij}\beta_j)^2 + \lambda \sum_{j=1}^p|\beta_j|\}</script>]]></content>
+    <content type="html"><![CDATA[<h2 id="有偏估计"><a href="#有偏估计" class="headerlink" title="有偏估计"></a>有偏估计</h2><p>Lasso和岭回归的提出是为了解决回归中出现的多重共线性这一问题，即 $\boldsymbol{X}^T\boldsymbol{X}$不满秩的情况。不同于逐步回归，Lasso和岭回归同属于<strong>有偏估计</strong>。</p><p>由OLS估计的正规方程的解可知</p><script type="math/tex; mode=display">\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><p>当存在多重共线性的时候，会导致$\boldsymbol{X}^T\boldsymbol{X}$难以求逆。因此一个思想就是通过给$\boldsymbol{X}^T\boldsymbol{X}$加一个扰动项（通常为一个正常数矩阵$k\boldsymbol{I}(k&gt;0$）来解决这个问题，这就是有偏估计的思想。在有偏估计下，$\boldsymbol{\beta}$的估计值为</p><script type="math/tex; mode=display">\hat{\boldsymbol{\beta}} = (\boldsymbol{X}^T\boldsymbol{X})^{-1}\boldsymbol{X}^T\boldsymbol{Y}</script><h2 id="Lasso原理"><a href="#Lasso原理" class="headerlink" title="Lasso原理"></a>Lasso原理</h2><p>Lasso在参数估计的同时既可以对估计值进行压缩，也可以让一些不重要的变量的估计值恰好为0，从而达到变量选择的功能。Lasso回归等价于在OLS回归的基础上给估计值的大小增加一个约束:</p><script type="math/tex; mode=display">\hat{\boldsymbol{\beta}}_{lasso} = \arg \min_{\boldsymbol{\beta}}\{\sum_{i=1}^n(y_i-\beta_0-\sum_{j=1}^p x_{ij}\beta_j)^2 + \lambda \sum_{j=1}^p|\beta_j|\}</script><h2 id="Lasso求解：坐标下降算法"><a href="#Lasso求解：坐标下降算法" class="headerlink" title="Lasso求解：坐标下降算法"></a>Lasso求解：坐标下降算法</h2><p>在对数据拟合lasso模型之前，要先对数据进行标准化，消除量纲影响和截距项。经过标准化之后可以得到如下性质:</p><ul><li>$1/n \sum_iy_i = 0$(消去截距项)</li><li>$1/n \sum_ix_{ij} = 0$</li><li>$1/n \sum_ix_{ij}^2 = 1$<br>标准化之后构建目标函数:<script type="math/tex; mode=display">\arg \min_{\boldsymbol{\beta}}\{\frac{1}{2n}\sum_{i=1}^n(y_i-\sum_{j=1}^p x_{ij}\beta_j)^2 + \lambda \sum_{j=1}^p|\beta_j|\}</script></li></ul><h3 id="一元情况下"><a href="#一元情况下" class="headerlink" title="一元情况下"></a>一元情况下</h3><p>首先考虑只有一个自变量 $x$的情况。对上式进行化简得:</p><script type="math/tex; mode=display">\left\{\begin{aligned}  &const + \frac{1}{2}\beta^2 - \frac{1}{n}\sum_{i=1}^{n}y_ix_i + \lambda\beta, \quad &\beta > 0\\  &const, &\beta = 0\\  &const + \frac{1}{2}\beta^2 - \frac{1}{n}\sum_{i=1}^{n}y_ix_i - \lambda\beta, \quad &\beta < 0\\\end{aligned}\right.</script><p>对 $\beta$求导，得其解析解为</p><script type="math/tex; mode=display">\hat{\beta}  = \left\{\begin{aligned}  &\frac{1}{n}\sum_{i=1}^ny_ix_i - \lambda, \quad &\frac{1}{n}\sum_{i=1}^ny_ix_i > \lambda\\  &0, &other\\  &\frac{1}{n}\sum_{i=1}^ny_ix_i + \lambda, \quad &\frac{1}{n}\sum_{i=1}^ny_ix_i < - \lambda\\\end{aligned}\right.</script><p>可以令 $ \langle x,y\rangle = \sum_{i=1}^ny_ix_i $，定义软阈算子 $S_\lambda(x)$:</p><script type="math/tex; mode=display">S_\lambda(x) = sign(x)(|x| - \lambda)_+</script><p>可得</p><script type="math/tex; mode=display">\hat{\beta} = S_\lambda(\frac{1}{n}<x,y>)</script><p>可以由此求解 $\hat{\beta}$的值。</p><h3 id="多元情况下"><a href="#多元情况下" class="headerlink" title="多元情况下"></a>多元情况下</h3><p>采用坐标循环的方法求解：按照某个固定的顺序重复对变量进行循环，即在第 $j$步时，保持其他的回归系数不变，然后通过最小化目标函数来更新回归系数 $\beta_j$。易知第 $j$步的目标函数是:</p><script type="math/tex; mode=display">\frac{1}{2n}\sum_{i=1}^n(y_i - \sum_{k \ne j}x_{ik}\beta_k - x_{ij}\beta_j)^2 + \lambda \sum_{k \ne j}|\beta_k| + \lambda|\beta_j|</script><p>不妨令偏残差 $r_i^{(j)} = y_i - \sum_{k \ne j} x_{ik}\hat{\beta}_k$，可将其转变成一元的情况，$\hat{\beta}_j$的求解方程为</p><script type="math/tex; mode=display">\hat{\beta}_j = S_\lambda(\frac{1}{n}<x_j, r^{(j)}>)</script><p>通常从一个非常大的 $\lambda$值出发，即 $\lambda_{max} = \max_j|\frac{1}{n}\langle x_j, y \rangle|$,然后逐渐降低 $\lambda$，并且利用前一次所求出的解作为这次求解的热启动。</p><p>由于目标函数是 $\beta$的凸函数，一次可以通过循环坐标下降法收敛到全局最优。</p>]]></content>
     
     <summary type="html">
     
