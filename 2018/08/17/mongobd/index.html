@@ -102,18 +102,18 @@
 
 
 
-  <meta name="description" content="标准化(Standardizing/Normalization)数据的标准化是将数据按比例缩放，使之落入一个小的特定区间。在某些比较和评价的指标处理中经常会用到，去除数据的单位限制，将其转化为无量纲的纯数值，便于不同单位或量级的指标能够进行比较和加权。常用的标准化方法为:  X^* = \frac{X-\mu}{\sigma}经过标准化后的数据具有如下的性质:  $E(X) = 0$ $D(X)">
-<meta name="keywords" content="多元">
+  <meta name="description" content="MongoDB三个基本的概念：数据库(DataBase) 数据库是一个仓库，在仓库里可以存放集合集合(Collection) 集合类似于数组，在集合中可以存放文档 集合和数据库都不需要手动创建。文档(Document)   文档是数据库中的最小单位，我们储存和操作的内容都是文档。 在创建文档时，如果文档所在的集合或数据库不存在，则会自动创建数据库与集合。    MacOS X Catalina安装">
+<meta name="keywords" content="算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="标准化、归一化和中心化">
-<meta property="og:url" content="https://rdf0rest.github.io/20120/06/12/standard/index.html">
+<meta property="og:title" content="MongoDB">
+<meta property="og:url" content="https://rdf0rest.github.io/2018/08/17/mongobd/index.html">
 <meta property="og:site_name" content="Rd&#39;s F0rest">
-<meta property="og:description" content="标准化(Standardizing/Normalization)数据的标准化是将数据按比例缩放，使之落入一个小的特定区间。在某些比较和评价的指标处理中经常会用到，去除数据的单位限制，将其转化为无量纲的纯数值，便于不同单位或量级的指标能够进行比较和加权。常用的标准化方法为:  X^* = \frac{X-\mu}{\sigma}经过标准化后的数据具有如下的性质:  $E(X) = 0$ $D(X)">
+<meta property="og:description" content="MongoDB三个基本的概念：数据库(DataBase) 数据库是一个仓库，在仓库里可以存放集合集合(Collection) 集合类似于数组，在集合中可以存放文档 集合和数据库都不需要手动创建。文档(Document)   文档是数据库中的最小单位，我们储存和操作的内容都是文档。 在创建文档时，如果文档所在的集合或数据库不存在，则会自动创建数据库与集合。    MacOS X Catalina安装">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-06-12T10:08:15.704Z">
+<meta property="og:updated_time" content="2020-07-22T09:57:51.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标准化、归一化和中心化">
-<meta name="twitter:description" content="标准化(Standardizing/Normalization)数据的标准化是将数据按比例缩放，使之落入一个小的特定区间。在某些比较和评价的指标处理中经常会用到，去除数据的单位限制，将其转化为无量纲的纯数值，便于不同单位或量级的指标能够进行比较和加权。常用的标准化方法为:  X^* = \frac{X-\mu}{\sigma}经过标准化后的数据具有如下的性质:  $E(X) = 0$ $D(X)">
+<meta name="twitter:title" content="MongoDB">
+<meta name="twitter:description" content="MongoDB三个基本的概念：数据库(DataBase) 数据库是一个仓库，在仓库里可以存放集合集合(Collection) 集合类似于数组，在集合中可以存放文档 集合和数据库都不需要手动创建。文档(Document)   文档是数据库中的最小单位，我们储存和操作的内容都是文档。 在创建文档时，如果文档所在的集合或数据库不存在，则会自动创建数据库与集合。    MacOS X Catalina安装">
 
 
 
@@ -122,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="https://rdf0rest.github.io/20120/06/12/standard/"/>
+  <link rel="canonical" href="https://rdf0rest.github.io/2018/08/17/mongobd/"/>
 
 
 
@@ -132,7 +132,7 @@
   };
 </script>
 
-  <title>标准化、归一化和中心化 | Rd's F0rest</title>
+  <title>MongoDB | Rd's F0rest</title>
   
 
 
@@ -254,25 +254,17 @@
         
         
           
-          <li class="menu-item menu-item-deeplearning">
-    <a href="/categories/deeplearning/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-connectdevelop"></i> <br />Deep Learning</a>
+          <li class="menu-item menu-item-technique">
+    <a href="/categories/technique/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-connectdevelop"></i> <br />Technique</a>
   </li>
         
         
         
           
-          <li class="menu-item menu-item-multivariate">
-    <a href="/categories/multivariate/" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-circle"></i> <br />multivariate</a>
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-math">
-    <a href="/categories/Math" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-university"></i> <br />Math</a>
+          <li class="menu-item menu-item-math&statistic">
+    <a href="/categories/Math&Statistic" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-university"></i> <br />Math&Statistic</a>
   </li>
 
       
@@ -323,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://rdf0rest.github.io/20120/06/12/standard/">
+    <link itemprop="mainEntityOfPage" href="https://rdf0rest.github.io/2018/08/17/mongobd/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Tony">
@@ -340,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">标准化、归一化和中心化
+          <h1 class="post-title" itemprop="name headline">MongoDB
               
             
           </h1>
@@ -365,7 +357,7 @@
                 
               
 
-              <time title="Created: 20120-06-12 21:40:27" itemprop="dateCreated datePublished" datetime="20120-06-12T21:40:27+08:00">20120-06-12</time>
+              <time title="Created: 2018-08-17 23:36:48" itemprop="dateCreated datePublished" datetime="2018-08-17T23:36:48+08:00">2018-08-17</time>
             
 
             
@@ -382,7 +374,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-06-12 18:08:15" itemprop="dateModified" datetime="2020-06-12T18:08:15+08:00">2020-06-12</time>
+                <time title="Modified: 2020-07-22 17:57:51" itemprop="dateModified" datetime="2020-07-22T17:57:51+08:00">2020-07-22</time>
               
             
           </span>
@@ -399,7 +391,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/multivariate/" itemprop="url" rel="index"><span itemprop="name">multivariate</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Technique/" itemprop="url" rel="index"><span itemprop="name">Technique</span></a></span>
 
                 
                 
@@ -414,8 +406,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/20120/06/12/standard/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/20120/06/12/standard/" itemprop="commentsCount"></span>
+                <a href="/2018/08/17/mongobd/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">Comments: </span> <span class="post-comments-count gitment-comments-count" data-xid="/2018/08/17/mongobd/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -443,16 +435,116 @@
       
 
       
-        <h2 id="标准化-Standardizing-Normalization"><a href="#标准化-Standardizing-Normalization" class="headerlink" title="标准化(Standardizing/Normalization)"></a>标准化(Standardizing/Normalization)</h2><p>数据的标准化是将数据按比例缩放，使之落入一个小的特定区间。在某些比较和评价的指标处理中经常会用到，去除数据的单位限制，将其转化为无量纲的纯数值，便于不同单位或量级的指标能够进行比较和加权。常用的标准化方法为:</p>
-<script type="math/tex; mode=display">
-X^* = \frac{X-\mu}{\sigma}</script><p>经过标准化后的数据具有如下的性质:</p>
-<ul>
-<li>$E(X) = 0$</li>
-<li>$D(X) = 1$</li>
+        <h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB"></a>MongoDB</h1><h2 id="三个基本的概念："><a href="#三个基本的概念：" class="headerlink" title="三个基本的概念："></a>三个基本的概念：</h2><h4 id="数据库-DataBase"><a href="#数据库-DataBase" class="headerlink" title="数据库(DataBase)"></a>数据库(DataBase)</h4><ul>
+<li>数据库是一个仓库，在仓库里可以存放<strong>集合</strong><h4 id="集合-Collection"><a href="#集合-Collection" class="headerlink" title="集合(Collection)"></a>集合(Collection)</h4></li>
+<li>集合类似于数组，在集合中可以存放<strong>文档</strong><ul>
+<li>集合和数据库都不需要手动创建。<h4 id="文档-Document"><a href="#文档-Document" class="headerlink" title="文档(Document)"></a>文档(Document)</h4></li>
 </ul>
-<h2 id="中心化-Zero-centering"><a href="#中心化-Zero-centering" class="headerlink" title="中心化(Zero-centering)"></a>中心化(Zero-centering)</h2><p>数据的中心化是指将数据的中心点(均值)归为0，而对其方差并无要求:</p>
-<script type="math/tex; mode=display">
-X_{center} = X - \mu</script>
+</li>
+<li>文档是数据库中的最小单位，我们储存和操作的内容都是文档。<ul>
+<li>在创建文档时，如果文档所在的集合或数据库不存在，则会自动创建数据库与集合。</li>
+</ul>
+</li>
+</ul>
+<h2 id="MacOS-X-Catalina安装"><a href="#MacOS-X-Catalina安装" class="headerlink" title="MacOS X Catalina安装:"></a>MacOS X Catalina安装:</h2><ul>
+<li>进入<a href="https://www.mongodb.com" target="_blank" rel="noopener">MongoDB官网</a></li>
+<li>下载<strong>Community Server</strong>解压到<code>/usr/local</code>，并重命名为<code>mongodb</code></li>
+<li>把 MongoDB 的二进制命令文件目录（安装目录/bin）添加到 PATH 路径中<ul>
+<li><code>export PATH=/usr/local/mongodb/bin:$PATH</code></li>
+</ul>
+</li>
+<li>首先我们创建一个数据库存储目录<ul>
+<li><code>sudo mkdir -p ~/data/db</code>(Catalina下储存容器挂载在根目录有问题)</li>
+</ul>
+</li>
+<li>启动MongoDB服务器<ul>
+<li><code>sudo mongod --dbpath=~/data/db</code></li>
+</ul>
+</li>
+<li>另外打开一个terminal，进入数据库客户端<ul>
+<li><code>cd /usr/local/mongodb/bin</code></li>
+<li><code>./mongo</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="数据库的服务器和客户端"><a href="#数据库的服务器和客户端" class="headerlink" title="数据库的服务器和客户端"></a>数据库的服务器和客户端</h2><ul>
+<li>数据库的服务器用来保存数据</li>
+<li>数据库的客户端是用来操作服务器，对数据进行增删改查的操作。</li>
+</ul>
+<h2 id="常用指令-shell下"><a href="#常用指令-shell下" class="headerlink" title="常用指令(shell下)"></a>常用指令(shell下)</h2><ul>
+<li><code>show dbs</code>显示所有的数据库</li>
+<li><code>shou collections</code>显示数据库中所有的集合</li>
+<li><code>use &lt;name&gt;</code>进入到指定数据库</li>
+<li><code>db</code>表示当前所处的数据库</li>
+</ul>
+<h2 id="数据库的CRUD操作（增删改查）"><a href="#数据库的CRUD操作（增删改查）" class="headerlink" title="数据库的CRUD操作（增删改查）"></a>数据库的CRUD操作（增删改查）</h2><h4 id="增加（Create）：向数据库中插入文档"><a href="#增加（Create）：向数据库中插入文档" class="headerlink" title="增加（Create）：向数据库中插入文档"></a>增加（Create）：向数据库中插入文档</h4><ul>
+<li><code>db.&lt;collection&gt;.insert(doc)</code>向集合中插入文档（json格式）<ul>
+<li>当插入一条数据时，使用json格式<ul>
+<li><code>insert({name:&#39;SunwuKong&#39;,age:18,gender:&#39;male&#39;})</code></li>
+</ul>
+</li>
+<li>当插入多条数据时，使用数组:<ul>
+<li>`insert([{name:’沙和尚’,age:’38’,gender:’男’},<pre><code>      {name:&#39;白骨精&#39;,age:&#39;16&#39;,gender:&#39;女&#39;},
+      {name:&#39;猪蜘蛛精&#39;,age:&#39;14&#39;,gender:&#39;女&#39;},
+      ])`
+</code></pre></li>
+</ul>
+</li>
+<li>如果在集合中插入文档时，没有指定_id属性，则数据库会自动为文档添加_id属性作为文档的唯一标识。</li>
+</ul>
+</li>
+<li><code>db.&lt;collection&gt;.insertOne(doc)</code>只能插入一个文档</li>
+<li><code>db.&lt;collection&gt;.insertMany(doc)</code>只能插入多个文档<h4 id="查找-Read-：在数据库中查找文档"><a href="#查找-Read-：在数据库中查找文档" class="headerlink" title="查找(Read)：在数据库中查找文档"></a>查找(Read)：在数据库中查找文档</h4></li>
+<li><code>db.&lt;collection&gt;.find()</code>查询当前集合中的所有符合条件的文档数组<ul>
+<li><code>find()</code>中可以接受一个对象作为查询条件<ul>
+<li><code>{}</code>表示查询所有的文档</li>
+</ul>
+</li>
+<li><code>find().count()</code>查询文档数组的数量</li>
+</ul>
+</li>
+<li><code>db.&lt;collection&gt;.findOne()</code>查询当前集合中的所有符合条件的<strong>第一个</strong>文档对象<ul>
+<li>可以直接取对象的属性值<code>db.&lt;collection&gt;.findOne().name</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="修改-Update-：修改数据库中的文档"><a href="#修改-Update-：修改数据库中的文档" class="headerlink" title="修改(Update)：修改数据库中的文档"></a>修改(Update)：修改数据库中的文档</h4><ul>
+<li><p><code>db.&lt;collections&gt;.update(查询条件,新对象)</code>有两个参数，修改成新对象（默认只修改第一个）</p>
+<ul>
+<li><code>db.stus.update({name:&#39;沙和尚&#39;}, {age:28})</code></li>
+<li>默认情况下会使用新对象替换旧对象：只剩下age28了</li>
+<li><p>如果需要修改指定属性而不是替换，需要使用<strong>修改操作符</strong></p>
+<ul>
+<li><code>$set</code>用来修改文档中的指定属性<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">db.stus.update(</span><br><span class="line">  &#123;name:&quot;沙和尚&quot;&#125;,</span><br><span class="line">  &#123;$set&#123;</span><br><span class="line">    gender:&apos;男&apos;,</span><br><span class="line">    address:&apos;流沙河&apos;</span><br><span class="line">    &#125;&#125;</span><br><span class="line">  )</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><code>$unset</code>用来删除文档中的指定属性</p>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">db.stus.update(</span><br><span class="line">    &#123;name:&quot;沙和尚&quot;&#125;,</span><br><span class="line">    &#123;$unset&#123;</span><br><span class="line">      address:&apos;流沙河&apos;</span><br><span class="line">      &#125;&#125;</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>db.&lt;collections&gt;.updateMany(查询条件,新对象)</code>把所有的符合条件的文档都进行修改</li>
+<li><code>db.&lt;collections&gt;.updateOne(查询条件,新对象)</code>把第一个符合条件的文档都进行修改</li>
+<li><code>db.&lt;collections&gt;.relaceOne(查询条件,新对象)</code>把指定属性进行替换</li>
+</ul>
+<h4 id="删除-Delete-将数据库的文档删除"><a href="#删除-Delete-将数据库的文档删除" class="headerlink" title="删除(Delete):将数据库的文档删除"></a>删除(Delete):将数据库的文档删除</h4><ul>
+<li><code>db.&lt;collection&gt;.remove()</code>删除符合条件的所有文档（默认）<ul>
+<li><code>remove()</code>根据条件来删除文档，传递条件的方式和<code>find()</code>一样</li>
+<li>如果第二个参数传递一个True则只会删除一个</li>
+<li>如果只穿一个空对象，则清空集合（性能较差）<ul>
+<li><code>db.&lt;collection&gt;.drop()</code>清空集合（性能较好）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>db.&lt;collection&gt;.deleteOne()</code>删除一个文档</li>
+<li><code>db.&lt;collection&gt;.deleteMany()</code>删除多个文档</li>
+<li><code>db.dropDatabase()</code>删除数据库</li>
+</ul>
+
       
     </div>
 
@@ -472,7 +564,7 @@ X_{center} = X - \mu</script>
       
         <div class="post-tags">
           
-            <a href="/tags/多元/" rel="tag"><i class="fa fa-tag"></i> 多元</a>
+            <a href="/tags/算法/" rel="tag"><i class="fa fa-tag"></i> 算法</a>
           
         </div>
       
@@ -485,8 +577,8 @@ X_{center} = X - \mu</script>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/06/11/Lasso/" rel="next" title="Lasso原理以及求解方法">
-                <i class="fa fa-chevron-left"></i> Lasso原理以及求解方法
+              <a href="/2018/08/09/QAGH_Inequality/" rel="next" title="QAGH Inequality">
+                <i class="fa fa-chevron-left"></i> QAGH Inequality
               </a>
             
           </div>
@@ -494,6 +586,10 @@ X_{center} = X - \mu</script>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/08/17/learning2/" rel="prev" title="Deep Learning Week 2|Note">
+                Deep Learning Week 2|Note <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -570,7 +666,7 @@ X_{center} = X - \mu</script>
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -587,9 +683,7 @@ X_{center} = X - \mu</script>
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -655,7 +749,7 @@ X_{center} = X - \mu</script>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#标准化-Standardizing-Normalization"><span class="nav-number">1.</span> <span class="nav-text">标准化(Standardizing/Normalization)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中心化-Zero-centering"><span class="nav-number">2.</span> <span class="nav-text">中心化(Zero-centering)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MongoDB"><span class="nav-number">1.</span> <span class="nav-text">MongoDB</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#三个基本的概念："><span class="nav-number">1.1.</span> <span class="nav-text">三个基本的概念：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数据库-DataBase"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">数据库(DataBase)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#集合-Collection"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">集合(Collection)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#文档-Document"><span class="nav-number">1.1.0.3.</span> <span class="nav-text">文档(Document)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MacOS-X-Catalina安装"><span class="nav-number">1.2.</span> <span class="nav-text">MacOS X Catalina安装:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的服务器和客户端"><span class="nav-number">1.3.</span> <span class="nav-text">数据库的服务器和客户端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用指令-shell下"><span class="nav-number">1.4.</span> <span class="nav-text">常用指令(shell下)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库的CRUD操作（增删改查）"><span class="nav-number">1.5.</span> <span class="nav-text">数据库的CRUD操作（增删改查）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#增加（Create）：向数据库中插入文档"><span class="nav-number">1.5.0.1.</span> <span class="nav-text">增加（Create）：向数据库中插入文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查找-Read-：在数据库中查找文档"><span class="nav-number">1.5.0.2.</span> <span class="nav-text">查找(Read)：在数据库中查找文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改-Update-：修改数据库中的文档"><span class="nav-number">1.5.0.3.</span> <span class="nav-text">修改(Update)：修改数据库中的文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#删除-Delete-将数据库的文档删除"><span class="nav-number">1.5.0.4.</span> <span class="nav-text">删除(Delete):将数据库的文档删除</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -828,7 +922,7 @@ X_{center} = X - \mu</script>
       <script type="text/javascript">
       function renderGitment(){
         var gitment = new Gitmint({
-            id: '572772778827000',
+            id: '1534520208000',
             owner: 'RdF0rest',
             repo: 'Gitment_comments',
             
